@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { BOOKING_URL } from '../config';
+
+const cases = [
+  {
+    id: 'dolphin',
+    tag: 'Insurance Tech',
+    title: 'Dolphin Claims',
+    problem: 'Policyholder intake took hours of phone tag and manual data entry, and after-hours leads went cold.',
+    built: 'An AI claims assistant and ops platform: guided intake, document collection, and status updates — all logged automatically.',
+    results: [
+      ['4x', 'Faster intake'],
+      ['24/7', 'Response, even at 2 a.m.'],
+      ['100%', 'Of interactions logged'],
+    ],
+  },
+  {
+    id: 'pools',
+    tag: 'Home Services',
+    title: "Florida's Best Pools",
+    problem: 'Great service, invisible online. Missed calls during service hours meant missed customers.',
+    built: 'A fast website with booking, local SEO and Google Business management, and an AI receptionist that answers every lead — day or night.',
+    results: [
+      ['3x', 'Lead capture'],
+      ['#1', 'Local ranking'],
+      ['0', 'Missed calls'],
+    ],
+  },
+];
+---
+<Layout
+  title="Work — Goliath Solutions"
+  description="Case studies: how Goliath Solutions builds websites, SEO, and AI systems that win jobs for real operators."
+>
+  <section class="bg-paper px-5 py-16 text-center">
+    <h1 class="text-4xl font-bold sm:text-5xl">Proof, not promises.</h1>
+    <p class="mx-auto mt-4 max-w-xl text-ink/70">Real work for real operators. Here's what happened when they switched their online presence on.</p>
+  </section>
+
+  {cases.map((c) => (
+    <section id={c.id} class="mx-auto max-w-4xl px-5 py-16">
+      <span class="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">{c.tag}</span>
+      <h2 class="mt-3 text-3xl font-bold">{c.title}</h2>
+      <div class="mt-6 grid gap-8 sm:grid-cols-2">
+        <div>
+          <h3 class="font-semibold text-ink/50">The problem</h3>
+          <p class="mt-1">{c.problem}</p>
+          <h3 class="mt-5 font-semibold text-ink/50">What we built</h3>
+          <p class="mt-1">{c.built}</p>
+        </div>
+        <div class="grid grid-cols-3 content-start gap-4">
+          {c.results.map(([n, l]) => (
+            <div class="rounded-2xl bg-paper p-4 text-center">
+              <div class="text-2xl font-bold text-accent">{n}</div>
+              <div class="mt-1 text-xs text-ink/60">{l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="bg-ink px-5 py-16 text-center text-white">
+    <h2 class="text-3xl font-bold">Want results like these?</h2>
+    <a href={BOOKING_URL} class="mt-6 inline-block rounded-full bg-accent px-6 py-3 font-semibold hover:bg-accent/90">Book a free call →</a>
+  </section>
+</Layout>
