@@ -1,0 +1,35 @@
+---
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '../config';
+const year = new Date().getFullYear();
+---
+<footer class="bg-ink text-white/70">
+  <div class="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:grid-cols-3">
+    <div>
+      <div class="mb-2 flex items-center gap-2 font-bold text-white">
+        <span class="grid size-7 place-items-center rounded-md bg-white text-sm text-ink">G</span>
+        Goliath Solutions
+      </div>
+      <p class="text-sm">The Goliath Growth System — website, local SEO, and marketing, done for you. Based in Florida. Working everywhere.</p>
+    </div>
+    <div class="text-sm">
+      <h5 class="mb-2 font-semibold text-white">Site</h5>
+      <ul class="space-y-1">
+        <li><a href="/#included" class="hover:text-white">The System</a></li>
+        <li><a href="/#pricing" class="hover:text-white">Pricing</a></li>
+        <li><a href="/work" class="hover:text-white">Work</a></li>
+        <li><a href="/about" class="hover:text-white">About</a></li>
+        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div class="text-sm">
+      <h5 class="mb-2 font-semibold text-white">Get in touch</h5>
+      <ul class="space-y-1">
+        <li><a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-white">{CONTACT_EMAIL}</a></li>
+        <li><a href={`tel:${CONTACT_PHONE}`} class="hover:text-white">{CONTACT_PHONE_DISPLAY}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs">
+    © {year} Goliath Solutions. Made for builders, doers, and operators.
+  </div>
+</footer>
