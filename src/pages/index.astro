@@ -1,6 +1,171 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PricingCard from '../components/PricingCard.astro';
+import CaseCard from '../components/CaseCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { PRICING, BOOKING_URL } from '../config';
+
+const faqItems = [
+  { q: 'What exactly do I get?', a: `A custom website built to turn visitors into booked jobs, ongoing local SEO and Google Business Profile management, automated review collection, lead capture with fast follow-up, and monthly marketing — all handled for you for $${PRICING.monthly}/month after a $${PRICING.setup.toLocaleString()} build.` },
+  { q: 'How fast will my site launch?', a: 'Most sites launch within two weeks of our kickoff call. SEO and reviews start working from day one after launch.' },
+  { q: 'Do I own my website?', a: 'Yes. Your domain, your content, your data. If you ever leave, the site goes with you.' },
+  { q: 'Is there a contract?', a: 'Month to month. We keep your business by earning it, not by locking you in.' },
+  { q: 'What trades do you work with?', a: 'Plumbers, roofers, pool service, HVAC, electricians, landscapers, contractors, adjusters — if you run crews and answer phones, this is built for you.' },
+  { q: 'What if I need something bigger?', a: 'We also build custom apps, AI agents, and automations for operators who want more. Book a call and tell us where it hurts.' },
+];
 ---
-<Layout title="Goliath Solutions" description="Stub" withSchema>
-  <h1>Stub — replaced in Task 3</h1>
+<Layout
+  title="Goliath Solutions — Website, SEO & Marketing for the Trades, Done For You"
+  description={`The Goliath Growth System: a fast website, local SEO, Google Business Profile, reviews, and marketing — done for you for $${PRICING.monthly}/mo. Built for blue collar service businesses.`}
+  withSchema
+>
+  <!-- HERO -->
+  <section class="bg-paper">
+    <div class="mx-auto max-w-6xl px-5 py-20 text-center sm:py-28">
+      <p class="font-semibold text-accent">For plumbers, roofers, pool techs, HVAC, contractors — every trade.</p>
+      <h1 class="mx-auto mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
+        Your whole online presence. Handled.
+      </h1>
+      <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">
+        One package: a fast website, top-of-Google local SEO, reviews on autopilot, and marketing that gets your
+        phone ringing — done for you, for less than a part-time office hire.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={BOOKING_URL} class="rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90">Book a free call →</a>
+        <a href="#included" class="rounded-full border border-ink/20 px-6 py-3 font-semibold hover:bg-ink/5">See the system</a>
+      </div>
+      <p class="mt-6 text-sm text-ink/50">Built by Joe Ford — 14 years running real businesses, not slide decks.</p>
+    </div>
+  </section>
+
+  <!-- PAIN -->
+  <section class="mx-auto max-w-6xl px-5 py-20">
+    <h2 class="text-center text-3xl font-bold sm:text-4xl">Great work isn&apos;t enough anymore.</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-3">
+      <div class="rounded-2xl bg-paper p-6">
+        <h3 class="font-bold">Invisible on Google</h3>
+        <p class="mt-2 text-sm text-ink/70">The guy with worse work but a better Google profile is taking your calls. Ranking is a system, not luck.</p>
+      </div>
+      <div class="rounded-2xl bg-paper p-6">
+        <h3 class="font-bold">Missed calls, missed jobs</h3>
+        <p class="mt-2 text-sm text-ink/70">Every unanswered lead calls the next name on the list. Capture and follow-up shouldn&apos;t depend on whoever&apos;s near the phone.</p>
+      </div>
+      <div class="rounded-2xl bg-paper p-6">
+        <h3 class="font-bold">Agency games</h3>
+        <p class="mt-2 text-sm text-ink/70">$5,000+ builds, $2,000/mo retainers, jargon reports, and a site that still doesn&apos;t ring the phone. You deserve straight talk and a straight price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section id="included" class="bg-ink text-white">
+    <div class="mx-auto max-w-6xl px-5 py-20">
+      <p class="font-semibold text-accent-soft">The Goliath Growth System</p>
+      <h2 class="mt-2 max-w-2xl text-3xl font-bold sm:text-4xl">Everything your business needs to win online. One system. One price.</h2>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          ['Website that books jobs', 'Fast, clean, and built around one goal: turning visitors into calls and booked work. Loads in under a second.'],
+          ['Local SEO, managed', 'Neighborhood-level targeting so you show up when someone searches "your trade near me." Managed every month, not set-and-forget.'],
+          ['Google Business Profile', 'Optimized, posted to, and maintained — the map pack is where local jobs come from.'],
+          ['Reviews on autopilot', 'Every finished job triggers a review ask that doesn&apos;t feel spammy. Your rating climbs while you work.'],
+          ['Lead capture + follow-up', 'Quote forms and call tracking wired so no lead slips. Fast follow-up wins the job.'],
+          ['Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No jargon, no vanity metrics.'],
+        ].map(([title, body]) => (
+          <div class="rounded-2xl bg-white/5 p-6">
+            <h3 class="font-bold">{title}</h3>
+            <p class="mt-2 text-sm text-white/70">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="bg-paper">
+    <div class="mx-auto max-w-6xl px-5 py-20">
+      <h2 class="text-center text-3xl font-bold sm:text-4xl">Simple, honest pricing.</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-ink/70">
+        Agencies charge $5,000+ to build and $2,000+/month to "manage." We built a leaner system and pass the savings to you.
+      </p>
+      <div class="mt-10"><PricingCard /></div>
+      <p class="mt-8 text-center text-sm text-ink/60">
+        Bigger project? We also build custom apps, AI agents, and automation. <a href="/contact" class="font-semibold text-accent">Talk to us →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="mx-auto max-w-6xl px-5 py-20">
+    <h2 class="text-3xl font-bold sm:text-4xl">Real work for real operators.</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      <CaseCard
+        tag="Insurance Tech"
+        title="Dolphin Claims"
+        blurb="An AI claims assistant and ops platform that cuts policyholder intake from hours to minutes."
+        stats={[{ n: '4x', l: 'Faster intake' }, { n: '24/7', l: 'Response' }, { n: '100%', l: 'Logged' }]}
+        href="/work#dolphin"
+        theme="ocean"
+      />
+      <CaseCard
+        tag="Home Services"
+        title="Florida&apos;s Best Pools"
+        blurb="Website, booking, and an AI receptionist that answers every lead — day or night."
+        stats={[{ n: '3x', l: 'Lead capture' }, { n: '#1', l: 'Local rank' }, { n: '0', l: 'Missed calls' }]}
+        href="/work#pools"
+        theme="pool"
+      />
+    </div>
+  </section>
+
+  <!-- FOUNDER TEASER -->
+  <section class="bg-paper">
+    <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 py-20 text-center">
+      <div class="grid size-24 place-items-center rounded-full bg-ink text-3xl font-bold text-white">JF</div>
+      <blockquote class="max-w-2xl text-xl font-medium">
+        &quot;I&apos;ve run businesses for 14 years. I know what it&apos;s like to lose a job because your website looks like 2009
+        and your phone rang while you were on a roof. That&apos;s why this exists.&quot;
+      </blockquote>
+      <p class="text-sm text-ink/60">Joe Ford, founder — Goliath Solutions</p>
+      <a href="/about" class="font-semibold text-accent">Read the story →</a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="mx-auto max-w-6xl px-5 py-20">
+    <h2 class="text-center text-3xl font-bold sm:text-4xl">How it works.</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-4">
+      {[
+        ['01', 'Call', 'A free 30-minute call. Your business, your market, your bottlenecks.'],
+        ['02', 'Build', 'We build your site and set up the system. About two weeks.'],
+        ['03', 'Launch', 'Site live, Google profile tuned, reviews and lead capture switched on.'],
+        ['04', 'Grow', 'We run it monthly — SEO, reviews, marketing — and report in plain English.'],
+      ].map(([num, title, body]) => (
+        <div class="rounded-2xl border border-ink/10 p-6">
+          <div class="text-sm font-bold text-accent">{num}</div>
+          <h3 class="mt-1 font-bold">{title}</h3>
+          <p class="mt-2 text-sm text-ink/70">{body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-paper">
+    <div class="mx-auto max-w-6xl px-5 py-20">
+      <h2 class="text-center text-3xl font-bold sm:text-4xl">Questions, answered straight.</h2>
+      <div class="mt-10"><FAQ items={faqItems} /></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-ink text-center text-white">
+    <div class="mx-auto max-w-3xl px-5 py-20">
+      <h2 class="text-3xl font-bold sm:text-4xl">Let&apos;s make your business hard to beat.</h2>
+      <p class="mt-3 text-white/70">Free call. No pressure. If we&apos;re not the right fit, we&apos;ll point you to someone who is.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={BOOKING_URL} class="rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90">Book a free call →</a>
+        <a href="/contact" class="rounded-full border border-white/30 px-6 py-3 font-semibold hover:bg-white/10">Get a quote</a>
+      </div>
+    </div>
+  </section>
 </Layout>
