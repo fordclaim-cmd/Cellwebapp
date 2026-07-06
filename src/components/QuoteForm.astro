@@ -1,0 +1,58 @@
+<form id="quote-form" class="space-y-4" novalidate>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label class="block text-sm font-semibold">
+      Name
+      <input name="name" required minlength="2" maxlength="100" class="mt-1 w-full rounded-lg border border-ink/20 px-3 py-2 font-normal" />
+    </label>
+    <label class="block text-sm font-semibold">
+      Trade
+      <input name="trade" required minlength="2" maxlength="100" placeholder="Plumbing, roofing, pools…" class="mt-1 w-full rounded-lg border border-ink/20 px-3 py-2 font-normal" />
+    </label>
+    <label class="block text-sm font-semibold">
+      Phone
+      <input name="phone" type="tel" required minlength="7" maxlength="25" class="mt-1 w-full rounded-lg border border-ink/20 px-3 py-2 font-normal" />
+    </label>
+    <label class="block text-sm font-semibold">
+      City
+      <input name="city" required minlength="2" maxlength="100" class="mt-1 w-full rounded-lg border border-ink/20 px-3 py-2 font-normal" />
+    </label>
+  </div>
+  <label class="block text-sm font-semibold">
+    What do you need? <span class="font-normal text-ink/50">(optional)</span>
+    <textarea name="message" maxlength="2000" rows="4" class="mt-1 w-full rounded-lg border border-ink/20 px-3 py-2 font-normal"></textarea>
+  </label>
+  <!-- Honeypot: hidden from humans, bots fill it -->
+  <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+  <button type="submit" class="rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90">
+    Send my quote request →
+  </button>
+  <p data-status role="status" class="text-sm font-medium"></p>
+</form>
+
+<script>
+  const form = document.getElementById('quote-form') as HTMLFormElement;
+  const status = form.querySelector('[data-status]') as HTMLElement;
+  const button = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    status.textContent = 'Sending…';
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      status.textContent = "Got it — we'll call you within one business day.";
+    } catch {
+      status.textContent = 'Something went wrong — call or email us instead.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>

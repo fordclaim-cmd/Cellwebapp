@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '../config';
+---
+<Layout
+  title="Contact — Goliath Solutions"
+  description="Get a quote for the Goliath Growth System or book a free call. Website, local SEO, and marketing for the trades — done for you."
+>
+  <section class="bg-paper px-5 py-16 text-center">
+    <h1 class="text-4xl font-bold sm:text-5xl">Tell us where it hurts.</h1>
+    <p class="mx-auto mt-4 max-w-xl text-ink/70">Two ways in: grab a time on the calendar, or send the form and we'll call you.</p>
+    <a href={BOOKING_URL} class="mt-6 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90">
+      Book a free 30-minute call →
+    </a>
+  </section>
+
+  <section class="mx-auto max-w-2xl px-5 py-16">
+    <h2 class="text-2xl font-bold">Or request a quote</h2>
+    <p class="mt-2 text-ink/70">Takes 30 seconds. We reply within one business day.</p>
+    <div class="mt-8"><QuoteForm /></div>
+    <p class="mt-10 text-sm text-ink/60">
+      Prefer direct? <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-accent">{CONTACT_EMAIL}</a>
+      · <a href={`tel:${CONTACT_PHONE}`} class="font-semibold text-accent">{CONTACT_PHONE_DISPLAY}</a>
+    </p>
+  </section>
+</Layout>
