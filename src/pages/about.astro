@@ -4,31 +4,138 @@ import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import { BOOKING_URL } from '../config';
 import joeFord from '../assets/proof/joe-ford.jpg';
+import teamFull from '../assets/proof/team-full.jpg';
+
+const stack = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Postgres / Supabase', 'Vercel + Edge', 'Claude / GPT / Gemini', 'AI agents + RAG', 'Resend', 'Stripe'];
+
+const timeline = [
+  ['2011 → today', 'Founded Goliath Solutions', 'Business operations consulting and management — helping small and mid-sized businesses tighten ops, cut waste, and scale. Fifteen years in, still operating.'],
+  ['2018', 'Hack Reactor · Cohort 29', 'Elite immersive coding program — graduated a full-stack JavaScript engineer. 12-hour days, real ship deadlines. React, Node, Postgres, the whole stack.'],
+  ['2021 – 2023', 'Operations / CTO · Express Public Adjusting', 'Ran ops and tech for a public adjusting firm representing policyholders against insurance companies. Built the systems, automation, lead pipeline, and data stack.'],
+  ['2023', 'Founded DolphinClaims', 'A public adjusting firm of my own — helping homeowners and businesses recover full insurance claim payouts after a loss.'],
+  ['2025', 'Co-founded Florida’s Best Pools', 'Premier pool servicing company in Boca Raton, FL. 10,000+ pools serviced, CPO-licensed, and ranked #1 on Google with 200 five-star reviews — on a site and system I built personally.'],
+  ['2026', 'Goliath, productized', 'Packaged 15 years of operating and engineering into done-for-you websites, SEO, and marketing for other operators. The same playbook that runs my own companies — at a price a working business can justify.'],
+];
+
+const record = [
+  ['Founder · 2011 → today', 'Goliath Solutions', 'Business operations consulting and management. Tightening ops, cutting waste, and scaling small and mid-sized businesses through process and technology.', 'Operating 15+ years'],
+  ['Ops / CTO · 2021 – 2023', 'Express Public Adjusting', 'Ran operations and tech for a public adjusting firm. Built the systems, automation, lead pipeline, and data stack from the ground up.', 'Ops + CTO'],
+  ['Founder · 2023', 'DolphinClaims', 'Public adjusting firm representing policyholders against insurance companies. Built the operations, lead pipeline, and tech stack from zero.', 'Operating today'],
+];
 ---
 <Layout
   title="About — Goliath Solutions | Built by an Operator, Not an Agency"
-  description="Joe Ford spent 14 years running real businesses — and is a partner in a pool company he ranked to #1 on Google — before building Goliath Solutions for the trades."
+  description="Joe Ford founded Goliath Solutions in 2011, became a full-stack engineer, and co-founded a pool company he ranked to #1 on Google. 15 years of operating, now offered to the trades."
 >
+  <!-- HERO -->
   <section class="bg-navy px-5 py-20 text-center text-white sm:py-24">
-    <div class="mx-auto size-28 overflow-hidden rounded-full ring-4 ring-cyan/40">
-      <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" />
+    <div class="mx-auto max-w-[1320px]">
+      <p class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur">Engineer · Operator · Founder</p>
+      <h1 class="mx-auto mt-5 max-w-3xl font-black tracking-[-0.02em]" style="font-size: clamp(36px, 6vw, 60px)">Built by an operator,<br /><span class="text-cyan">not an agency.</span></h1>
+      <p class="mx-auto mt-5 max-w-2xl text-[18px] leading-relaxed text-white/80">
+        15 years running real companies. A Hack Reactor full-stack engineer. Five businesses founded and run.
+        You're not hiring a designer — you're hiring an operator who happens to ship code.
+      </p>
     </div>
-    <h1 class="mt-6 font-black tracking-[-0.02em]" style="font-size: clamp(36px, 6vw, 60px)">Built by an operator,<br /><span class="text-cyan">not an agency.</span></h1>
-    <p class="mx-auto mt-4 max-w-xl text-white/75">Most marketing companies are run by marketers. This one is run by a guy who's answered the phone at dinner and made payroll on a Friday.</p>
   </section>
 
-  <section class="mx-auto max-w-2xl space-y-5 px-5 py-16 text-[18px] leading-relaxed text-ink">
-    <p>I'm Joe Ford. I've spent the last 14 years running real businesses — hiring crews, chasing invoices, answering the phone at dinner, and learning the hard way what actually brings work in the door.</p>
-    <p>One of those businesses is <span class="font-semibold text-navy">Florida's Best Pools</span>, a 40-year family pool company in South Florida I'm a partner in. Great work, great crew — and, for a while, almost invisible on Google. I watched operators all around me hand agencies $2,000 a month for "SEO reports" that never once made the phone ring.</p>
-    <p>So I stopped hiring agencies and built the system myself — website, local SEO, Google profile, reviews — for my own company first. Today Florida's Best Pools sits at <span class="font-semibold text-navy">#1 on Google in its market with 200 five-star reviews</span>, pulling 60+ organic calls a month without buying a single click. Then friends in the trades started asking me to do the same for them.</p>
-    <p>That became Goliath Solutions. One package that handles the whole online side of a service business — website, local SEO, Google Business, reviews, Local Service Ads — for a price a working company can actually justify.</p>
-    <p>No account managers in a ticket queue. No jargon reports. No 12-month contract to trap you. You deal with me, you see the real numbers, and if we're not earning our keep, you walk — month to month. The risk is on my side of the table, where it belongs.</p>
-    <p class="font-bold text-navy">Great work deserves to be found. Let's make sure yours is.</p>
+  <!-- BIO + TOOLKIT -->
+  <section class="bg-paper px-5 py-20">
+    <div class="mx-auto grid max-w-[1100px] gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+      <div>
+        <div class="overflow-hidden rounded-[24px] shadow-xl shadow-navy/10">
+          <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="w-full object-cover" loading="lazy" />
+        </div>
+        <h2 class="mt-5 text-[24px] font-black text-navy">Joe Ford</h2>
+        <p class="text-sm font-semibold text-cyan-deep">Founder · Full-Stack Engineer · 15-Year Operator</p>
+      </div>
+      <div>
+        <div class="space-y-4 text-[17px] leading-relaxed text-ink">
+          <p>I founded <span class="font-semibold text-navy">Goliath Solutions</span> in 2011 as a business-operations consultancy. Along the way I became a full-stack engineer (Hack Reactor, Cohort 29), ran operations and tech as CTO of a public adjusting firm, and started companies of my own — <span class="font-semibold text-navy">DolphinClaims</span> and <span class="font-semibold text-navy">Florida's Best Pools</span>.</p>
+          <p>Fifteen years of operating service businesses means every site I build comes with the perspective of someone who's actually lived on the other side of it — hiring crews, chasing invoices, answering the phone at dinner. I don't design pretty pages. I build marketing assets that book calls.</p>
+          <p class="font-semibold text-navy">Now, through Goliath, I run that exact playbook for other operators — the same systems that rank my own companies, applied to yours.</p>
+        </div>
+        <div class="mt-7">
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-mute">The toolkit</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {stack.map((t) => (
+              <span class="rounded-full border border-line bg-mist px-3 py-1 text-[13px] font-medium text-navy">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- THE PATH (timeline) -->
+  <section class="bg-mist px-5 py-20">
+    <div class="mx-auto max-w-[860px]">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ The path</p>
+      <h2 class="mt-3 font-black tracking-[-0.01em] text-navy" style="font-size: clamp(28px, 4.5vw, 42px)">15 years of operating, <span class="text-cyan">end to end.</span></h2>
+
+      <ol class="mt-12 space-y-0 border-l-2 border-line pl-8">
+        {timeline.map(([year, title, body], i) => (
+          <li class="relative pb-10 last:pb-0">
+            <span class="absolute -left-[41px] top-0.5 grid size-5 place-items-center rounded-full border-2 border-cyan bg-paper">
+              <span class="size-2 rounded-full bg-cyan"></span>
+            </span>
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-cyan-deep">{year}</p>
+            <h3 class="mt-1 text-[19px] font-black text-navy">{title}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-mute">{body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- STAT BAR -->
+  <section class="bg-navy px-5 py-12 text-white">
+    <div class="mx-auto grid max-w-[1100px] grid-cols-2 gap-8 text-center sm:grid-cols-4">
+      {[['15+', 'Years operating'], ['5', 'Companies founded + run'], ['10K+', 'Real customer jobs'], ['200', '★ Google reviews']].map(([n, l]) => (
+        <div>
+          <div class="font-black tracking-[-0.02em] text-gold" style="font-size: clamp(30px, 5vw, 46px)">{n}</div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.14em] text-white/60">{l}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- TRACK RECORD -->
+  <section class="bg-paper px-5 py-20">
+    <div class="mx-auto max-w-[1320px]">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ The track record</p>
+      <h2 class="mt-3 font-black tracking-[-0.01em] text-navy" style="font-size: clamp(28px, 4.5vw, 42px)">Businesses <span class="text-cyan">built + run.</span></h2>
+      <p class="mt-3 max-w-2xl text-mute">Founded and operated — real revenue, real ops, real lessons. Every page I build for you reflects what I've learned running my own.</p>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {record.map(([tag, name, body, foot]) => (
+          <div class="flex h-full flex-col rounded-[20px] border border-line bg-mist p-6">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-deep">{tag}</p>
+            <h3 class="mt-2 text-[20px] font-black text-navy">{name}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-mute">{body}</p>
+            <p class="mt-4 border-t border-line pt-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-mute/80">{foot}</p>
+          </div>
+        ))}
+        <!-- FBP flagship card with photo -->
+        <a href="/work#pools" class="group flex h-full flex-col overflow-hidden rounded-[20px] border-2 border-cyan bg-paper shadow-lg shadow-cyan/10 md:col-span-2 lg:col-span-1">
+          <div class="relative h-28 overflow-hidden">
+            <Image src={teamFull} alt="The Florida's Best Pools team" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-deep">Co-founder · 2025</p>
+            <h3 class="mt-2 text-[20px] font-black text-navy">Florida's Best Pools</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-mute">Premier Boca Raton pool company. CPO-licensed, fully insured — with a 500+ page site and marketing system I built personally.</p>
+            <p class="mt-4 inline-flex items-center gap-1.5 border-t border-line pt-3 text-[11px] font-bold uppercase tracking-[0.1em] text-cyan-deep">10K+ pools · 200 ★ reviews <Icon name="arrow" size={12} /></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="border-t border-line bg-mist px-5 py-16 text-center">
     <h2 class="font-black tracking-[-0.01em] text-navy" style="font-size: clamp(28px, 4.5vw, 40px)">Tell me where it hurts.</h2>
-    <p class="mt-2 text-mute">The first call is free and useful — even if you never hire us. You'll leave with a plan either way.</p>
+    <p class="mx-auto mt-2 max-w-xl text-mute">The first call is free and useful — even if you never hire us. You deal with the operator, not a chatbot. You'll leave with a plan either way.</p>
     <a href={BOOKING_URL} class="mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 font-bold text-navy transition hover:bg-gold-deep hover:text-white">Book a free call <Icon name="arrow" size={16} /></a>
   </section>
 </Layout>
