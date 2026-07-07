@@ -40,7 +40,7 @@ const schema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#00101f" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -50,7 +50,7 @@ const schema = {
     <link rel="sitemap" href="/sitemap-index.xml" />
     {withSchema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
-  <body class="bg-black font-sans text-white antialiased">
+  <body class="bg-ground font-sans text-white antialiased">
     <Nav />
     <slot />
     <Footer />

@@ -13,19 +13,19 @@ import techTesting from '../assets/proof/tech-water-testing.jpg';
 import teamMarina from '../assets/proof/team-marina-trio.jpg';
 
 const perks = [
-  ['globe', '#e73f2f', 'A website that books jobs', 'Fast, clean, one job: turn a visitor into a booked call. Loads in under a second.', '<1s', 'Load time'],
-  ['search', '#3fa9e7', 'Local SEO, managed monthly', 'Neighborhood-level targeting so you show up for "your trade near me." Worked every month.', '#1', 'Local goal'],
-  ['pin', '#f0b45a', 'Google Business Profile', 'Optimized, posted to, and maintained. The map pack is where local jobs are won.', 'Map', 'Pack owned'],
-  ['star', '#937bfe', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work.', '5.0', 'Star target'],
-  ['phone', '#7fe08a', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. Fast follow-up wins the job.', '0', 'Leads lost'],
-  ['chart', '#e73f2f', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No vanity metrics, no jargon.', '1/mo', 'Clear report'],
+  ['globe', '#1196cc', 'A website that books jobs', 'Fast, clean, one job: turn a visitor into a booked call. Loads in under a second.', '<1s', 'Load time'],
+  ['search', '#3cb5e3', 'Local SEO, managed monthly', 'Neighborhood-level targeting so you show up for "your trade near me." Worked every month.', '#1', 'Local goal'],
+  ['pin', '#f6bb06', 'Google Business Profile', 'Optimized, posted to, and maintained. The map pack is where local jobs are won.', 'Map', 'Pack owned'],
+  ['star', '#3cb5e3', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work.', '5.0', 'Star target'],
+  ['phone', '#006ab8', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. Fast follow-up wins the job.', '0', 'Leads lost'],
+  ['chart', '#1196cc', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No vanity metrics, no jargon.', '1/mo', 'Clear report'],
 ];
 
 const milestones = [
-  ['01', '#e73f2f', 'Free game plan', 'A 30-minute call. Your market, your bottlenecks, your fastest wins — no pitch theater.'],
-  ['02', '#e73f2f', 'We build', 'Website up, Google profile tuned, reviews and lead capture switched on. ~2 weeks.'],
-  ['03', '#937bfe', 'Launch', 'You go live and start showing up where local jobs are won.'],
-  ['04', '#f0b45a', 'We run it', 'SEO, reviews, marketing — handled monthly, reported in plain English.'],
+  ['01', '#1196cc', 'Free game plan', 'A 30-minute call. Your market, your bottlenecks, your fastest wins — no pitch theater.'],
+  ['02', '#1196cc', 'We build', 'Website up, Google profile tuned, reviews and lead capture switched on. ~2 weeks.'],
+  ['03', '#3cb5e3', 'Launch', 'You go live and start showing up where local jobs are won.'],
+  ['04', '#f6bb06', 'We run it', 'SEO, reviews, marketing — handled monthly, reported in plain English.'],
 ];
 
 const faqItems = [
@@ -43,13 +43,13 @@ const faqItems = [
   withSchema
 >
   <!-- ===== HERO ===== -->
-  <section class="relative overflow-hidden bg-black px-5 pt-16 pb-4">
+  <section class="relative overflow-hidden bg-ground px-5 pt-16 pb-4">
     <!-- diagonal ribbon -->
-    <div class="pointer-events-none absolute right-[-64px] top-9 z-10 rotate-[18deg] bg-flame px-16 py-3 text-center text-[11px] font-black uppercase tracking-[0.28em] text-white" style="box-shadow: 0 12px 30px rgba(231,63,47,0.45)">
+    <div class="pointer-events-none absolute right-[-64px] top-9 z-10 rotate-[18deg] bg-flame px-16 py-3 text-center text-[11px] font-black uppercase tracking-[0.28em] text-white" style="box-shadow: 0 12px 30px rgba(17,150,204,0.45)">
       ★ Free game plan · No lock-in ★
     </div>
     <!-- radial backlight -->
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style="background: radial-gradient(ellipse at top, rgba(231,63,47,0.22) 0%, rgba(0,0,0,0) 60%)"></div>
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style="background: radial-gradient(ellipse at top, rgba(17,150,204,0.22) 0%, rgba(0,0,0,0) 60%)"></div>
 
     <div class="relative mx-auto grid max-w-[1320px] gap-12 py-12 sm:py-16 lg:grid-cols-2 lg:items-center">
       <div class="rise">
@@ -64,7 +64,7 @@ const faqItems = [
           local SEO, and 5-star reviews on autopilot — all handled for you, for less than one lost job a month.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-flame-deep" style="box-shadow: 0 14px 28px rgba(231,63,47,0.4)">
+          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-flame-deep" style="box-shadow: 0 14px 28px rgba(17,150,204,0.4)">
             Claim your free game plan <Icon name="arrow" size={17} />
           </a>
           <a href="#included" class="inline-flex items-center rounded-full border border-white/25 px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10">
@@ -92,10 +92,10 @@ const faqItems = [
     </div>
 
     <!-- counter band -->
-    <div class="relative mx-auto max-w-[1320px] overflow-hidden rounded-3xl border border-line" style="background: #0a0a0a">
-      <div class="grid grid-cols-2 gap-px sm:grid-cols-4" style="background: #262626">
+    <div class="relative mx-auto max-w-[1320px] overflow-hidden rounded-3xl border border-line" style="background: #001325">
+      <div class="grid grid-cols-2 gap-px sm:grid-cols-4" style="background: #0e3a63">
         {[['197', '5-star reviews'], ['10,000+', 'pools serviced'], ['#1', 'on Google, local'], ['14 yrs', 'running businesses']].map(([n, l]) => (
-          <div class="bg-black px-5 py-7 text-center">
+          <div class="bg-ground px-5 py-7 text-center">
             <div class="font-black tracking-[-0.02em] text-white" style="font-size: clamp(28px, 4vw, 44px)">{n}</div>
             <div class="mx-auto mt-2 h-px w-12 bg-flame"></div>
             <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-white/50">{l}</div>
@@ -120,7 +120,7 @@ const faqItems = [
           ['dollar', "Agencies that don't get it", '$5,000 builds, $2,000/mo retainers, jargon reports — and a site that still doesn\'t ring. You want a straight price and a phone that rings. Fair.'],
         ].map(([icon, title, body]) => (
           <div class="rounded-[20px] border border-line bg-surface p-7">
-            <span class="inline-grid size-14 place-items-center rounded-2xl text-flame" style="background: rgba(231,63,47,0.1); border: 1.5px solid rgba(231,63,47,0.33)"><Icon name={icon} size={26} /></span>
+            <span class="inline-grid size-14 place-items-center rounded-2xl text-flame" style="background: rgba(17,150,204,0.1); border: 1.5px solid rgba(17,150,204,0.33)"><Icon name={icon} size={26} /></span>
             <h3 class="mt-4 text-[20px] font-black text-white">{title}</h3>
             <p class="mt-2 text-sm leading-relaxed text-white/60">{body}</p>
           </div>
@@ -130,7 +130,7 @@ const faqItems = [
   </section>
 
   <!-- ===== THE OFFER (6-up perk grid) ===== -->
-  <section id="included" class="bg-black px-5 py-24">
+  <section id="included" class="bg-ground px-5 py-24">
     <div class="mx-auto max-w-[1320px]">
       <div class="text-center">
         <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-gold">★ The Goliath Growth System</p>
@@ -175,7 +175,7 @@ const faqItems = [
   </section>
 
   <!-- ===== FLAGSHIP PROOF: FLORIDA'S BEST POOLS ===== -->
-  <section class="bg-black px-5 py-24">
+  <section class="bg-ground px-5 py-24">
     <div class="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:items-center">
       <div>
         <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-flame">We don't just talk. We rank our own company.</p>
@@ -187,10 +187,10 @@ const faqItems = [
         </p>
 
         <div class="mt-8 grid grid-cols-2 gap-4">
-          {[['#e73f2f', '#1', 'on Google for "best florida pools" — up from #7'],
-            ['#e73f2f', '#2', 'for "pool heater maintenance" — 1,600 searches/mo'],
-            ['#e73f2f', 'Top 3', 'across Boca Raton & Delray Beach pool searches'],
-            ['#f0b45a', '★ 5.0', '197 Google reviews and climbing']].map(([color, n, l]) => (
+          {[['#1196cc', '#1', 'on Google for "best florida pools" — up from #7'],
+            ['#1196cc', '#2', 'for "pool heater maintenance" — 1,600 searches/mo'],
+            ['#1196cc', 'Top 3', 'across Boca Raton & Delray Beach pool searches'],
+            ['#f6bb06', '★ 5.0', '197 Google reviews and climbing']].map(([color, n, l]) => (
             <div class="rounded-2xl border border-line bg-surface p-5">
               <div class="text-[28px] font-black" style={`color:${color}`}>{n}</div>
               <div class="mt-1 text-sm text-white/55">{l}</div>
@@ -212,7 +212,7 @@ const faqItems = [
   <!-- ===== RISK REVERSAL ===== -->
   <section class="border-y border-line bg-panel px-5 py-16">
     <div class="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center">
-      <span class="grid size-16 place-items-center rounded-2xl text-gold" style="background: rgba(240,180,90,0.12); border: 1.5px solid rgba(240,180,90,0.4)"><Icon name="shield" size={32} /></span>
+      <span class="grid size-16 place-items-center rounded-2xl text-gold" style="background: rgba(246,187,6,0.12); border: 1.5px solid rgba(246,187,6,0.4)"><Icon name="shield" size={32} /></span>
       <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4vw, 40px)">The 90-Day Ring Guarantee</h2>
       <p class="max-w-2xl text-[18px] leading-relaxed text-white/70">
         If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does.
@@ -225,7 +225,7 @@ const faqItems = [
   </section>
 
   <!-- ===== BEFORE / AFTER ===== -->
-  <section class="bg-black px-5 py-24">
+  <section class="bg-ground px-5 py-24">
     <div class="mx-auto max-w-5xl">
       <h2 class="text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Two ways to do this.</h2>
       <div class="mt-14 grid gap-5 md:grid-cols-2">
@@ -237,7 +237,7 @@ const faqItems = [
             ))}
           </ul>
         </div>
-        <div class="rounded-[24px] border-2 border-flame bg-surface p-8" style="box-shadow: 0 0 0 1px rgba(231,63,47,0.33), 0 30px 70px rgba(231,63,47,0.13)">
+        <div class="rounded-[24px] border-2 border-flame bg-surface p-8" style="box-shadow: 0 0 0 1px rgba(17,150,204,0.33), 0 30px 70px rgba(17,150,204,0.13)">
           <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-flame">The Goliath way</p>
           <ul class="mt-5 space-y-3 font-medium text-white">
             {[`$${PRICING.setup.toLocaleString()} to build, $${PRICING.monthly}/mo — all in`, 'Built and run by the operator who ranks his own business', 'One plain-English report a month', 'Month to month — you own everything', 'A system built to ring the phone, guaranteed'].map((t) => (
@@ -255,12 +255,12 @@ const faqItems = [
       <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-flame">How it works</p>
       <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Live in about two weeks.</h2>
       <div class="relative mt-16">
-        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: #262626"></div>
-        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: linear-gradient(90deg, #e73f2f 0%, #937bfe 55%, #f0b45a 100%)"></div>
+        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: #0e3a63"></div>
+        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: linear-gradient(90deg, #1196cc 0%, #3cb5e3 55%, #f6bb06 100%)"></div>
         <div class="relative grid gap-10 md:grid-cols-4">
           {milestones.map(([num, color, title, body]) => (
             <div class="text-center">
-              <div class="mx-auto grid size-[72px] place-items-center rounded-full text-[18px] font-black" style={`background:#1a1a1a; border:4px solid ${color}; color:${color}`}>{num}</div>
+              <div class="mx-auto grid size-[72px] place-items-center rounded-full text-[18px] font-black" style={`background:#002d5e; border:4px solid ${color}; color:${color}`}>{num}</div>
               <h3 class="mt-4 text-[17px] font-bold uppercase tracking-[0.08em] text-white">{title}</h3>
               <p class="mt-2 text-[13px] leading-relaxed text-white/55">{body}</p>
             </div>
@@ -271,7 +271,7 @@ const faqItems = [
   </section>
 
   <!-- ===== FOUNDER ===== -->
-  <section class="bg-black px-5 py-24">
+  <section class="bg-ground px-5 py-24">
     <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
       <div class="size-28 overflow-hidden rounded-full ring-4 ring-flame/30">
         <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" loading="lazy" />
@@ -296,8 +296,8 @@ const faqItems = [
   </section>
 
   <!-- ===== FINAL CTA ===== -->
-  <section class="bg-black px-5 py-24">
-    <div class="relative mx-auto max-w-[1100px] overflow-hidden rounded-[32px] p-10 text-center md:p-16" style="background: linear-gradient(135deg, #e73f2f 0%, #b72b1f 100%); box-shadow: 0 40px 80px rgba(231,63,47,0.4)">
+  <section class="bg-ground px-5 py-24">
+    <div class="relative mx-auto max-w-[1100px] overflow-hidden rounded-[32px] p-10 text-center md:p-16" style="background: linear-gradient(135deg, #1196cc 0%, #0d7aa8 100%); box-shadow: 0 40px 80px rgba(17,150,204,0.4)">
       <div class="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full" style="background: rgba(255,255,255,0.08)"></div>
       <div class="pointer-events-none absolute -bottom-32 -left-20 size-80 rounded-full" style="background: rgba(255,255,255,0.06)"></div>
       <div class="relative">
@@ -307,7 +307,7 @@ const faqItems = [
           Free game plan. No pressure. If we're not the right fit, we'll tell you who is. Backed by our 90-Day Ring Guarantee.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-black px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-black/80">Claim your free game plan <Icon name="arrow" size={17} /></a>
+          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-ground px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-ground/80">Claim your free game plan <Icon name="arrow" size={17} /></a>
           <a href="/contact" class="inline-flex items-center rounded-full border border-white/50 px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10">Get a quote</a>
         </div>
       </div>

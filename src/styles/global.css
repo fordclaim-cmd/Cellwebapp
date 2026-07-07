@@ -9,39 +9,42 @@
 }
 
 @theme {
-  /* Dark facelift palette (black + signature flame red + purple/gold accents) */
-  --color-flame: #e73f2f;
-  --color-flame-deep: #b72b1f;
-  --color-grape: #937bfe;
-  --color-grape-deep: #5327dc;
-  --color-gold: #f0b45a;
-  --color-gold-deep: #c98a34;
-  --color-panel: #121317;
-  --color-surface: #1a1a1a;
-  --color-line: #262626;
-  --color-hair: #3b3c3f;
-  --color-ash: #c9c9cc;
+  /* Florida's Best Pools palette — navy ground + cyan accent + bright gold.
+     Token names kept (flame/grape) so existing classes remap without churn:
+     flame = signature cyan CTA, grape = bright cyan, gold = FBP bright gold. */
+  --color-flame: #1196cc;
+  --color-flame-deep: #0d7aa8;
+  --color-grape: #3cb5e3;
+  --color-grape-deep: #005099;
+  --color-gold: #f6bb06;
+  --color-gold-deep: #c99405;
+  --color-ground: #00101f;
+  --color-panel: #001c38;
+  --color-surface: #002d5e;
+  --color-line: #0e3a63;
+  --color-hair: #14456e;
+  --color-ash: #b9cbdd;
 
   /* legacy accent kept so any un-migrated class still resolves */
-  --color-accent: #e73f2f;
-  --color-accent-soft: #937bfe;
-  --color-ink: #1a1a1a;
-  --color-paper: #121317;
+  --color-accent: #1196cc;
+  --color-accent-soft: #3cb5e3;
+  --color-ink: #002d5e;
+  --color-paper: #001c38;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  background: #000;
+  background: #00101f;
 }
 
 body {
-  background: #000;
+  background: #00101f;
   color: #fff;
 }
 
-/* Page-load reveal + odometer helpers, CSS-only. Respects reduced-motion. */
+/* Page-load reveal, CSS-only. Respects reduced-motion. */
 @media (prefers-reduced-motion: no-preference) {
   @keyframes rise {
     from { opacity: 0; transform: translateY(16px); }
