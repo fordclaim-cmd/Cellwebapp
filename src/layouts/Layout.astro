@@ -10,7 +10,10 @@ interface Props {
   withSchema?: boolean;
 }
 const { title, description, withSchema = false } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+// build.format: 'file' makes pathname `/about.html`; strip it so canonical/og:url
+// match the clean URLs Vercel serves (cleanUrls) and the sitemap lists.
+const cleanPath = Astro.url.pathname.replace(/index\.html$/, '').replace(/\.html$/, '');
+const canonical = new URL(cleanPath || '/', Astro.site);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
