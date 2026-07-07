@@ -45,12 +45,15 @@ const faqItems = [
   withSchema
 >
   <!-- ===== HERO (founder banner background) ===== -->
-  <section class="relative isolate overflow-hidden">
-    <Image src={joeHero} alt="Joe Ford, founder of Goliath Solutions, outside a South Florida waterfront home" class="absolute inset-0 -z-10 h-full w-full object-cover object-[35%_20%]" loading="eager" />
-    <div class="absolute inset-0 -z-10" style="background: linear-gradient(100deg, rgba(0,26,55,0.88) 0%, rgba(0,26,55,0.62) 42%, rgba(0,45,94,0.28) 100%)"></div>
+  <section class="relative isolate overflow-hidden bg-navy">
+    <!-- Joe: a framed banner on mobile, full-bleed background on desktop -->
+    <div class="relative h-72 w-full sm:h-96 lg:absolute lg:inset-0 lg:-z-10 lg:h-full">
+      <Image src={joeHero} alt="Joe Ford, founder of Goliath Solutions, outside a South Florida waterfront home" class="h-full w-full object-cover object-[22%_18%] lg:object-[38%_20%]" loading="eager" />
+      <div class="absolute inset-0 hidden lg:block" style="background: linear-gradient(100deg, rgba(0,26,55,0.88) 0%, rgba(0,26,55,0.62) 42%, rgba(0,45,94,0.28) 100%)"></div>
+    </div>
 
-    <div class="mx-auto grid max-w-[1320px] gap-10 px-5 py-16 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div class="rise text-white [text-shadow:0_2px_18px_rgba(0,16,31,0.5)]">
+    <div class="mx-auto grid max-w-[1320px] gap-10 px-5 py-12 sm:py-16 lg:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div class="rise text-white lg:[text-shadow:0_2px_18px_rgba(0,16,31,0.5)]">
         <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur [text-shadow:none]">
           <span class="text-gold"><Icon name="star" size={13} /></span> Operators who rank their own businesses
         </p>
