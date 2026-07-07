@@ -5,6 +5,7 @@ import PricingCard from '../components/PricingCard.astro';
 import FAQ from '../components/FAQ.astro';
 import { PRICING, BOOKING_URL } from '../config';
 
+import joeFord from '../assets/proof/joe-ford.jpg';
 import cleanWater from '../assets/proof/clean-water.jpg';
 import techSkimming from '../assets/proof/tech-skimming-pool.jpg';
 import techTesting from '../assets/proof/tech-water-testing.jpg';
@@ -271,8 +272,9 @@ const faqItems = [
   <!-- ===== FOUNDER ===== -->
   <section class="mx-auto max-w-4xl px-5 py-20">
     <div class="flex flex-col items-center gap-6 text-center">
-      <div class="grid size-24 place-items-center rounded-full bg-ink text-3xl font-bold text-white">JF</div>
-      <!-- TODO(Joe): replace the JF badge with a real photo in src/assets and <Image /> -->
+      <div class="size-28 overflow-hidden rounded-full ring-4 ring-paper">
+        <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" loading="lazy" />
+      </div>
       <blockquote class="max-w-2xl text-xl font-medium">
         "I've spent 14 years running real businesses — including a pool company we ranked to #1 in South Florida
         ourselves. I know what it's like to lose a job because your site looked like 2009 and your phone rang while

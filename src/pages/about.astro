@@ -1,20 +1,23 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import { BOOKING_URL } from '../config';
+import joeFord from '../assets/proof/joe-ford.jpg';
 ---
 <Layout
   title="About — Goliath Solutions"
   description="Joe Ford spent 14 years running real businesses before building Goliath Solutions — websites, SEO, and marketing systems for the trades."
 >
   <section class="bg-paper px-5 py-16 text-center">
-    <div class="mx-auto grid size-28 place-items-center rounded-full bg-ink text-4xl font-bold text-white">JF</div>
-    <!-- TODO(Joe): replace the JF badge above with a real photo in src/assets and <Image /> -->
+    <div class="mx-auto size-28 overflow-hidden rounded-full ring-4 ring-white shadow-lg">
+      <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" />
+    </div>
     <h1 class="mt-6 text-4xl font-bold sm:text-5xl">Built by an operator,<br />not an agency.</h1>
   </section>
 
   <section class="mx-auto max-w-2xl space-y-5 px-5 py-16 text-lg leading-relaxed">
     <p>I'm Joe Ford. I've spent the last 14 years running real businesses — hiring crews, chasing invoices, answering phones at dinner, and learning the hard way what actually brings work in the door.</p>
-    <p>Along the way I got deep into the other side: building websites, ranking on Google, wiring up automations, and putting AI to work. I built these systems for my own companies first. Then friends in the trades started asking for the same thing.</p>
+    <p>Along the way I got deep into the other side: building websites, ranking on Google, wiring up automations, and putting AI to work. I built these systems for my own companies first — including Florida's Best Pools, a South Florida pool company I'm a partner in, now ranked #1 on Google with 197 five-star reviews. Then friends in the trades started asking for the same thing.</p>
     <p>That became Goliath Solutions. One package that handles the whole online side of a service business — website, local SEO, Google Business, reviews, marketing — for a price a working company can actually justify.</p>
     <p>No account managers. No jargon reports. No $2,000/month retainers for two blog posts. You deal with me, you see the numbers, and if we're not earning our keep, you leave — month to month.</p>
     <p class="font-semibold">Great work deserves to be found. Let's make sure yours is.</p>
