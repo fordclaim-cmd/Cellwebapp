@@ -4,24 +4,64 @@ import QuoteForm from '../components/QuoteForm.astro';
 import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '../config';
 ---
 <Layout
-  title="Contact — Goliath Solutions"
-  description="Get a quote for the Goliath Growth System or book a free call. Website, local SEO, and marketing for the trades — done for you."
+  title="Contact — Goliath Solutions | Claim Your Free Game Plan"
+  description="Book a free 30-minute game plan or request a quote for the Goliath Growth System. Website, local SEO, and marketing for the trades — done for you, backed by a 90-Day Ring Guarantee."
 >
-  <section class="bg-paper px-5 py-16 text-center">
-    <h1 class="text-4xl font-bold sm:text-5xl">Tell us where it hurts.</h1>
-    <p class="mx-auto mt-4 max-w-xl text-ink/70">Two ways in: grab a time on the calendar, or send the form and we'll call you.</p>
-    <a href={BOOKING_URL} class="mt-6 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90">
-      Book a free 30-minute call →
+  <!-- HERO -->
+  <section class="bg-deep px-5 py-16 text-center text-white sm:py-20">
+    <p class="font-semibold text-gold">Free 30-minute game plan</p>
+    <h1 class="mx-auto mt-3 max-w-2xl text-4xl font-bold sm:text-5xl">Let's make your phone ring.</h1>
+    <p class="mx-auto mt-4 max-w-xl text-white/70">
+      Tell us where it hurts. We'll map your fastest wins on a free call — no pitch theater, no jargon, no obligation.
+      If we're not the right fit, we'll point you to who is.
+    </p>
+    <a href={BOOKING_URL} class="mt-7 inline-block rounded-full bg-accent px-7 py-3 text-lg font-semibold text-white transition hover:bg-accent/90">
+      Book my free game plan →
     </a>
+    <div class="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/60">
+      <span>★ 5.0 · 197 reviews</span>
+      <span>#1 on Google, local</span>
+      <span>You reply with the operator, not a chatbot</span>
+    </div>
   </section>
 
-  <section class="mx-auto max-w-2xl px-5 py-16">
-    <h2 class="text-2xl font-bold">Or request a quote</h2>
-    <p class="mt-2 text-ink/70">Takes 30 seconds. We reply within one business day.</p>
-    <div class="mt-8"><QuoteForm /></div>
-    <p class="mt-10 text-sm text-ink/60">
-      Prefer direct? <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-accent">{CONTACT_EMAIL}</a>
-      · <a href={`tel:${CONTACT_PHONE}`} class="font-semibold text-accent">{CONTACT_PHONE_DISPLAY}</a>
-    </p>
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="mx-auto max-w-5xl px-5 py-16">
+    <h2 class="text-center text-2xl font-bold sm:text-3xl">What happens after you reach out</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-3">
+      {[
+        ['1', 'We call you back', 'Within one business day. A real conversation about your market and your bottlenecks — not a sales script.'],
+        ['2', 'You get a game plan', 'A clear, honest read on your fastest path to more booked jobs. Yours to keep, even if you never hire us.'],
+        ['3', 'We build — if it fits', 'Like the plan? We start. Live in about two weeks, backed by the 90-Day Ring Guarantee. Month to month, always.'],
+      ].map(([n, title, body]) => (
+        <div class="rounded-2xl border border-ink/10 p-6">
+          <div class="grid size-8 place-items-center rounded-full bg-accent text-sm font-bold text-white">{n}</div>
+          <h3 class="mt-3 font-bold">{title}</h3>
+          <p class="mt-2 text-sm text-ink/70">{body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="bg-paper">
+    <div class="mx-auto max-w-2xl px-5 py-16">
+      <h2 class="text-2xl font-bold sm:text-3xl">Prefer we call you? Request a quote.</h2>
+      <p class="mt-2 text-ink/70">Takes 30 seconds. We reply within one business day — no spam, no wall of follow-up emails.</p>
+      <div class="mt-8"><QuoteForm /></div>
+      <p class="mt-10 text-sm text-ink/60">
+        Rather go direct? <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-accent">{CONTACT_EMAIL}</a>
+        · <a href={`tel:${CONTACT_PHONE}`} class="font-semibold text-accent">{CONTACT_PHONE_DISPLAY}</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- GUARANTEE FOOTER -->
+  <section class="bg-gold/10">
+    <div class="mx-auto flex max-w-3xl flex-col items-center gap-3 px-5 py-12 text-center">
+      <div class="text-4xl">🛡️</div>
+      <h2 class="text-2xl font-bold">The 90-Day Ring Guarantee</h2>
+      <p class="max-w-xl text-ink/75">If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does. That's how sure we are.</p>
+    </div>
   </section>
 </Layout>
