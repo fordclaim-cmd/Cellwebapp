@@ -1,20 +1,21 @@
 ---
 import { BOOKING_URL } from '../config';
+import Icon from './Icon.astro';
 ---
-<nav class="sticky top-0 z-50 border-b border-ink/10 bg-white/80 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-    <a href="/" class="flex items-center gap-2 font-bold text-ink">
-      <span class="grid size-7 place-items-center rounded-md bg-ink text-sm text-white">G</span>
-      Goliath Solutions
+<header class="sticky top-0 z-50 border-b border-line bg-black/85 backdrop-blur">
+  <div class="mx-auto flex max-w-[1320px] items-center justify-between px-5 py-3.5">
+    <a href="/" class="flex items-center gap-2.5">
+      <span class="inline-grid size-9 place-items-center rounded-full bg-flame text-sm font-black text-white">G</span>
+      <span class="text-[14px] font-bold uppercase tracking-[0.16em] text-white">Goliath Solutions</span>
     </a>
-    <div class="hidden items-center gap-7 text-sm text-ink/80 sm:flex">
-      <a href="/#included" class="hover:text-ink">The System</a>
-      <a href="/#pricing" class="hover:text-ink">Pricing</a>
-      <a href="/work" class="hover:text-ink">Work</a>
-      <a href="/about" class="hover:text-ink">About</a>
-    </div>
-    <a href={BOOKING_URL} class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent/90">
-      Book a free call
+    <nav class="hidden items-center gap-8 sm:flex">
+      <a href="/#included" class="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/70 transition hover:text-white">The System</a>
+      <a href="/#pricing" class="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/70 transition hover:text-white">Pricing</a>
+      <a href="/work" class="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/70 transition hover:text-white">Work</a>
+      <a href="/about" class="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/70 transition hover:text-white">About</a>
+    </nav>
+    <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-flame px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.12em] text-white transition hover:bg-flame-deep">
+      Get my game plan <Icon name="arrow" size={15} />
     </a>
   </div>
-</nav>
+</header>

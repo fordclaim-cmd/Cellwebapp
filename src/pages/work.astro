@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 import { BOOKING_URL } from '../config';
 
 import heroPool from '../assets/proof/hero-banner-pool.jpg';
@@ -9,10 +10,10 @@ import techSkimming from '../assets/proof/tech-skimming-pool.jpg';
 import techTesting from '../assets/proof/tech-water-testing.jpg';
 
 const fbpStats = [
-  ['#1', '"best florida pools" on Google — up from #7'],
-  ['#2', '"pool heater maintenance" — 1,600 searches/mo'],
-  ['Top 3', 'across Boca Raton & Delray Beach searches'],
-  ['★ 5.0', '197 Google reviews and climbing'],
+  ['#e73f2f', '#1', '"best florida pools" on Google — up from #7'],
+  ['#e73f2f', '#2', '"pool heater maintenance" — 1,600 searches/mo'],
+  ['#e73f2f', 'Top 3', 'across Boca Raton & Delray Beach searches'],
+  ['#f0b45a', '★ 5.0', '197 Google reviews and climbing'],
 ];
 ---
 <Layout
@@ -20,81 +21,85 @@ const fbpStats = [
   description="How Goliath Solutions ranked Florida's Best Pools to #1 on Google in South Florida — the same website, SEO, and review system we build for the trades."
 >
   <!-- HERO -->
-  <section class="bg-deep px-5 py-16 text-center text-white sm:py-20">
-    <p class="font-semibold text-gold">Proof, not promises.</p>
-    <h1 class="mx-auto mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">We rank our own businesses. Then we do it for yours.</h1>
-    <p class="mx-auto mt-4 max-w-xl text-white/70">The best proof we can offer isn't a testimonial — it's our own phone ringing.</p>
+  <section class="relative overflow-hidden bg-black px-5 py-20 text-center sm:py-24">
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-[360px]" style="background: radial-gradient(ellipse at top, rgba(231,63,47,0.2) 0%, rgba(0,0,0,0) 60%)"></div>
+    <div class="relative mx-auto max-w-[1320px]">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-flame">★ Proof, not promises</p>
+      <h1 class="mx-auto mt-3 max-w-3xl font-black tracking-[-0.02em] text-white" style="font-size: clamp(36px, 6vw, 64px)">We rank our own businesses. Then we do it for <span class="text-flame">yours.</span></h1>
+      <p class="mx-auto mt-4 max-w-xl text-white/65">The best proof we can offer isn't a testimonial — it's our own phone ringing.</p>
+    </div>
   </section>
 
   <!-- ===== FLAGSHIP: FLORIDA'S BEST POOLS ===== -->
-  <section id="pools" class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
-    <div class="overflow-hidden rounded-3xl">
+  <section id="pools" class="mx-auto max-w-[1320px] px-5 py-20 sm:py-24">
+    <div class="relative overflow-hidden rounded-[28px] border border-line">
       <Image src={heroPool} alt="A pristine South Florida pool serviced by Florida's Best Pools" class="h-64 w-full object-cover sm:h-80" />
+      <span class="absolute left-5 top-5 rounded-full bg-flame px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white">★ Case File</span>
     </div>
 
     <div class="mt-8 flex flex-wrap items-center gap-3">
-      <span class="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Home Services · Pool Care</span>
+      <span class="rounded-full bg-flame/15 px-3 py-1 text-xs font-semibold text-flame">Home Services · Pool Care</span>
       <span class="rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold text-gold">Our own company</span>
     </div>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Florida's Best Pools</h2>
+    <h2 class="mt-4 font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4.5vw, 42px)">Florida's Best Pools</h2>
 
     <div class="mt-6 grid gap-8 lg:grid-cols-2">
       <div>
-        <h3 class="font-semibold text-ink/50">The problem</h3>
-        <p class="mt-1 text-ink/80">A 40-year family pool operation with 10,000+ pools serviced and spotless work — but almost invisible online. New business leaned entirely on word of mouth, and the map pack was owned by competitors with worse service and better SEO.</p>
-        <h3 class="mt-5 font-semibold text-ink/50">What we built</h3>
-        <p class="mt-1 text-ink/80">The full Goliath Growth System: a fast website built to book service, neighborhood-level local SEO, a fully managed Google Business Profile, and a review engine that turns every finished job into a fresh 5-star review.</p>
-        <h3 class="mt-5 font-semibold text-ink/50">The result</h3>
-        <p class="mt-1 text-ink/80">Top of Google across Boca Raton and Delray Beach, #1 for the money keywords, and a 5.0 rating built on 197 reviews — a phone that rings without paying for a single click.</p>
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.16em] text-flame">The problem</h3>
+        <p class="mt-1.5 text-white/70">A 40-year family pool operation with 10,000+ pools serviced and spotless work — but almost invisible online. New business leaned entirely on word of mouth, and the map pack was owned by competitors with worse service and better SEO.</p>
+        <h3 class="mt-5 text-[11px] font-bold uppercase tracking-[0.16em] text-flame">What we built</h3>
+        <p class="mt-1.5 text-white/70">The full Goliath Growth System: a fast website built to book service, neighborhood-level local SEO, a fully managed Google Business Profile, and a review engine that turns every finished job into a fresh 5-star review.</p>
+        <h3 class="mt-5 text-[11px] font-bold uppercase tracking-[0.16em] text-flame">The result</h3>
+        <p class="mt-1.5 text-white/70">Top of Google across Boca Raton and Delray Beach, #1 for the money keywords, and a 5.0 rating built on 197 reviews — a phone that rings without paying for a single click.</p>
       </div>
 
       <div class="grid grid-cols-2 gap-4 self-start">
-        {fbpStats.map(([n, l]) => (
-          <div class="rounded-2xl border border-ink/10 p-5">
-            <div class="text-3xl font-bold text-accent">{n}</div>
-            <div class="mt-1 text-sm text-ink/60">{l}</div>
+        {fbpStats.map(([color, n, l]) => (
+          <div class="rounded-2xl border border-line bg-surface p-5">
+            <div class="text-[28px] font-black" style={`color:${color}`}>{n}</div>
+            <div class="mt-1 text-sm text-white/55">{l}</div>
           </div>
         ))}
       </div>
     </div>
 
     <!-- testimonial -->
-    <figure class="mt-10 rounded-3xl bg-paper p-8">
+    <figure class="mt-10 rounded-[24px] border border-line bg-surface p-8">
       <div class="text-gold">★★★★★</div>
-      <blockquote class="mt-3 text-lg font-medium text-ink/90">
+      <blockquote class="mt-3 text-[18px] font-medium leading-relaxed text-white/90">
         "Matt has been servicing my pool for seven years. He's kind, courteous, professional &amp; reliable.
         He always gets back to me promptly and he's always there when I need him. He does a great job with the
         weekly cleaning &amp; my pool always looks great!"
       </blockquote>
-      <figcaption class="mt-3 text-sm text-ink/60">— Kathryn Feinberg, Google review</figcaption>
+      <figcaption class="mt-3 text-sm text-white/55">— Kathryn Feinberg, Google review</figcaption>
     </figure>
 
     <!-- real photos -->
     <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-      <div class="overflow-hidden rounded-2xl"><Image src={teamFull} alt="The Florida's Best Pools team" class="h-56 w-full object-cover" loading="lazy" /></div>
-      <div class="overflow-hidden rounded-2xl"><Image src={techSkimming} alt="A technician skimming a pool" class="h-56 w-full object-cover" loading="lazy" /></div>
-      <div class="overflow-hidden rounded-2xl"><Image src={techTesting} alt="A technician testing pool water chemistry" class="h-56 w-full object-cover" loading="lazy" /></div>
+      <div class="overflow-hidden rounded-2xl border border-line"><Image src={teamFull} alt="The Florida's Best Pools team" class="h-56 w-full object-cover" loading="lazy" /></div>
+      <div class="overflow-hidden rounded-2xl border border-line"><Image src={techSkimming} alt="A technician skimming a pool" class="h-56 w-full object-cover" loading="lazy" /></div>
+      <div class="overflow-hidden rounded-2xl border border-line"><Image src={techTesting} alt="A technician testing pool water chemistry" class="h-56 w-full object-cover" loading="lazy" /></div>
     </div>
-    <p class="mt-3 text-xs text-ink/40">Live Google rankings for floridasbestpools.com, mid-2026. Photos: Florida's Best Pools.</p>
+    <p class="mt-3 text-xs text-white/35">Live Google rankings for floridasbestpools.com, mid-2026. Photos: Florida's Best Pools.</p>
   </section>
 
   <!-- ===== SECONDARY: DOLPHIN CLAIMS ===== -->
-  <section id="dolphin" class="bg-paper">
-    <div class="mx-auto max-w-6xl px-5 py-16">
-      <span class="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Insurance Tech</span>
-      <h2 class="mt-3 text-3xl font-bold">Dolphin Claims</h2>
+  <section id="dolphin" class="border-y border-line bg-panel">
+    <div class="mx-auto max-w-[1320px] px-5 py-20">
+      <span class="rounded-full bg-flame/15 px-3 py-1 text-xs font-semibold text-flame">Insurance Tech</span>
+      <h2 class="mt-3 font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4.5vw, 42px)">Dolphin Claims</h2>
       <div class="mt-6 grid gap-8 sm:grid-cols-2">
         <div>
-          <h3 class="font-semibold text-ink/50">The problem</h3>
-          <p class="mt-1 text-ink/80">Policyholder intake was slow, manual, and stalled after hours — every delay risked losing a claim to a faster competitor.</p>
-          <h3 class="mt-5 font-semibold text-ink/50">What we built</h3>
-          <p class="mt-1 text-ink/80">An AI claims assistant and ops platform: guided intake, document collection, and status updates, logged automatically around the clock.</p>
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.16em] text-flame">The problem</h3>
+          <p class="mt-1.5 text-white/70">Policyholder intake was slow, manual, and stalled after hours — every delay risked losing a claim to a faster competitor.</p>
+          <h3 class="mt-5 text-[11px] font-bold uppercase tracking-[0.16em] text-flame">What we built</h3>
+          <p class="mt-1.5 text-white/70">An AI claims assistant and ops platform: guided intake, document collection, and status updates, logged automatically around the clock.</p>
         </div>
         <div class="grid grid-cols-3 content-start gap-4">
           {[['4x', 'Faster intake'], ['24/7', 'Response'], ['100%', 'Logged']].map(([n, l]) => (
-            <div class="rounded-2xl bg-white p-4 text-center">
-              <div class="text-2xl font-bold text-accent">{n}</div>
-              <div class="mt-1 text-xs text-ink/60">{l}</div>
+            <div class="rounded-2xl border border-line bg-surface p-4 text-center">
+              <div class="text-2xl font-black text-flame">{n}</div>
+              <div class="mt-1 text-xs text-white/55">{l}</div>
             </div>
           ))}
         </div>
@@ -103,9 +108,11 @@ const fbpStats = [
   </section>
 
   <!-- CTA -->
-  <section class="bg-deep px-5 py-16 text-center text-white">
-    <h2 class="text-3xl font-bold sm:text-4xl">Want your name at the top?</h2>
-    <p class="mx-auto mt-3 max-w-xl text-white/70">We take on a handful of new builds a month. Grab your free game plan while there's room — backed by our 90-Day Ring Guarantee.</p>
-    <a href={BOOKING_URL} class="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-lg font-semibold text-white transition hover:bg-accent/90">Claim your free game plan →</a>
+  <section class="bg-black px-5 py-20 text-center">
+    <div class="mx-auto max-w-[1320px]">
+      <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4.5vw, 42px)">Want your name at the top?</h2>
+      <p class="mx-auto mt-3 max-w-xl text-white/65">We take on a handful of new builds a month. Grab your free game plan while there's room — backed by our 90-Day Ring Guarantee.</p>
+      <a href={BOOKING_URL} class="mt-6 inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-flame-deep">Claim your free game plan <Icon name="arrow" size={17} /></a>
+    </div>
   </section>
 </Layout>

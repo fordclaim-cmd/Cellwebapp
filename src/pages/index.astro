@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import PricingCard from '../components/PricingCard.astro';
 import FAQ from '../components/FAQ.astro';
+import Icon from '../components/Icon.astro';
 import { PRICING, BOOKING_URL } from '../config';
 
 import joeFord from '../assets/proof/joe-ford.jpg';
@@ -10,6 +11,22 @@ import cleanWater from '../assets/proof/clean-water.jpg';
 import techSkimming from '../assets/proof/tech-skimming-pool.jpg';
 import techTesting from '../assets/proof/tech-water-testing.jpg';
 import teamMarina from '../assets/proof/team-marina-trio.jpg';
+
+const perks = [
+  ['globe', '#e73f2f', 'A website that books jobs', 'Fast, clean, one job: turn a visitor into a booked call. Loads in under a second.', '<1s', 'Load time'],
+  ['search', '#3fa9e7', 'Local SEO, managed monthly', 'Neighborhood-level targeting so you show up for "your trade near me." Worked every month.', '#1', 'Local goal'],
+  ['pin', '#f0b45a', 'Google Business Profile', 'Optimized, posted to, and maintained. The map pack is where local jobs are won.', 'Map', 'Pack owned'],
+  ['star', '#937bfe', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work.', '5.0', 'Star target'],
+  ['phone', '#7fe08a', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. Fast follow-up wins the job.', '0', 'Leads lost'],
+  ['chart', '#e73f2f', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No vanity metrics, no jargon.', '1/mo', 'Clear report'],
+];
+
+const milestones = [
+  ['01', '#e73f2f', 'Free game plan', 'A 30-minute call. Your market, your bottlenecks, your fastest wins — no pitch theater.'],
+  ['02', '#e73f2f', 'We build', 'Website up, Google profile tuned, reviews and lead capture switched on. ~2 weeks.'],
+  ['03', '#937bfe', 'Launch', 'You go live and start showing up where local jobs are won.'],
+  ['04', '#f0b45a', 'We run it', 'SEO, reviews, marketing — handled monthly, reported in plain English.'],
+];
 
 const faqItems = [
   { q: "What if I already have a website?", a: "Good — we'll show you exactly why it isn't ringing the phone, then rebuild it into something that does. You keep your domain and content; we make it work." },
@@ -26,115 +43,116 @@ const faqItems = [
   withSchema
 >
   <!-- ===== HERO ===== -->
-  <section class="relative overflow-hidden bg-deep text-white">
-    <div class="pointer-events-none absolute -right-40 -top-40 size-[36rem] rounded-full bg-accent/25 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-52 -left-40 size-[32rem] rounded-full bg-gold/10 blur-3xl"></div>
+  <section class="relative overflow-hidden bg-black px-5 pt-16 pb-4">
+    <!-- diagonal ribbon -->
+    <div class="pointer-events-none absolute right-[-64px] top-9 z-10 rotate-[18deg] bg-flame px-16 py-3 text-center text-[11px] font-black uppercase tracking-[0.28em] text-white" style="box-shadow: 0 12px 30px rgba(231,63,47,0.45)">
+      ★ Free game plan · No lock-in ★
+    </div>
+    <!-- radial backlight -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style="background: radial-gradient(ellipse at top, rgba(231,63,47,0.22) 0%, rgba(0,0,0,0) 60%)"></div>
 
-    <div class="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:py-28 lg:grid-cols-2 lg:items-center">
+    <div class="relative mx-auto grid max-w-[1320px] gap-12 py-12 sm:py-16 lg:grid-cols-2 lg:items-center">
       <div class="rise">
-        <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-gold">
-          ★★★★★ Built by operators who rank their own businesses
+        <p class="inline-flex items-center gap-2 rounded-full border border-flame/40 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-flame">
+          <Icon name="star" size={13} /> Operators who rank their own businesses
         </p>
-        <h1 class="mt-5 text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
-          Be the first call<br />in town.
+        <h1 class="mt-5 font-black leading-[0.95] tracking-[-0.02em] text-white" style="font-size: clamp(48px, 8vw, 96px)">
+          Be the first call<br /><span class="text-flame">in town.</span>
         </h1>
-        <p class="mt-5 max-w-lg text-lg text-white/75">
+        <p class="mt-6 max-w-lg text-[18px] leading-relaxed text-white/70">
           We make the phone ring for blue collar businesses. A website that books jobs, top-of-Google
           local SEO, and 5-star reviews on autopilot — all handled for you, for less than one lost job a month.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href={BOOKING_URL} class="rounded-full bg-accent px-6 py-3 text-lg font-semibold text-white transition hover:bg-accent/90">
-            Claim your free game plan →
+          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-flame-deep" style="box-shadow: 0 14px 28px rgba(231,63,47,0.4)">
+            Claim your free game plan <Icon name="arrow" size={17} />
           </a>
-          <a href="#included" class="rounded-full border border-white/25 px-6 py-3 text-lg font-semibold transition hover:bg-white/10">
+          <a href="#included" class="inline-flex items-center rounded-full border border-white/25 px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10">
             See what you get
           </a>
         </div>
-        <p class="mt-4 text-sm text-white/50">Free 30-min call. No pressure. No jargon. Backed by our 90-Day Ring Guarantee.</p>
+        <p class="mt-4 text-sm text-white/45">Free 30-min call. No pressure. No jargon. Backed by our 90-Day Ring Guarantee.</p>
       </div>
 
       <!-- Real proof, rendered as a live Google result -->
-      <div class="rise rounded-2xl bg-white p-5 text-ink shadow-2xl shadow-black/40 [animation-delay:0.15s]">
-        <div class="flex items-center gap-2 border-b border-ink/10 pb-3 text-sm text-ink/50">
-          <span class="text-accent">🔍</span> pool service boca raton
+      <div class="rise overflow-hidden rounded-[20px] border border-line bg-surface p-5 [animation-delay:0.15s]" style="box-shadow: 0 30px 70px rgba(0,0,0,0.6)">
+        <div class="flex items-center gap-2 border-b border-line pb-3 text-sm text-white/45">
+          <Icon name="search" size={15} class="text-flame" /> pool service boca raton
         </div>
-        <div class="mt-3 rounded-xl border border-ink/10 p-4">
-          <div class="flex items-center justify-between">
-            <span class="rounded-full bg-accent/10 px-2 py-0.5 text-xs font-bold text-accent">#1 · Map pack</span>
-          </div>
-          <p class="mt-2 font-bold">Florida's Best Pools</p>
-          <p class="text-sm text-gold">★★★★★ <span class="text-ink/70">5.0 · 197 Google reviews</span></p>
-          <p class="mt-1 text-sm text-ink/60">Pool service · Boca Raton, FL · Open 24 hrs</p>
+        <div class="mt-3 rounded-xl border border-line bg-panel p-4">
+          <span class="rounded-full bg-flame/15 px-2 py-0.5 text-xs font-bold text-flame">#1 · Map pack</span>
+          <p class="mt-2 font-bold text-white">Florida's Best Pools</p>
+          <p class="text-sm text-gold">★★★★★ <span class="text-white/60">5.0 · 197 Google reviews</span></p>
+          <p class="mt-1 text-sm text-white/50">Pool service · Boca Raton, FL · Open 24 hrs</p>
         </div>
-        <p class="mt-4 text-center text-xs font-medium text-ink/50">
-          A real business we built and rank — <span class="text-ink">our own</span>.
+        <p class="mt-4 text-center text-xs font-medium text-white/45">
+          A real business we built and rank — <span class="text-white">our own</span>.
         </p>
       </div>
     </div>
 
-    <!-- trust bar -->
-    <div class="relative border-t border-white/10 bg-black/20">
-      <div class="mx-auto max-w-6xl px-5 py-6">
-        <div class="grid grid-cols-2 gap-6 text-center sm:grid-cols-4">
-          <div><div class="text-2xl font-bold text-gold">197</div><div class="text-xs text-white/60">5-star reviews</div></div>
-          <div><div class="text-2xl font-bold text-gold">10,000+</div><div class="text-xs text-white/60">pools serviced</div></div>
-          <div><div class="text-2xl font-bold text-gold">#1</div><div class="text-xs text-white/60">on Google, local</div></div>
-          <div><div class="text-2xl font-bold text-gold">14 yrs</div><div class="text-xs text-white/60">running real businesses</div></div>
-        </div>
-        <p class="mt-4 text-center text-xs text-white/40">Real numbers from Florida's Best Pools — the South Florida pool company we run and rank.</p>
+    <!-- counter band -->
+    <div class="relative mx-auto max-w-[1320px] overflow-hidden rounded-3xl border border-line" style="background: #0a0a0a">
+      <div class="grid grid-cols-2 gap-px sm:grid-cols-4" style="background: #262626">
+        {[['197', '5-star reviews'], ['10,000+', 'pools serviced'], ['#1', 'on Google, local'], ['14 yrs', 'running businesses']].map(([n, l]) => (
+          <div class="bg-black px-5 py-7 text-center">
+            <div class="font-black tracking-[-0.02em] text-white" style="font-size: clamp(28px, 4vw, 44px)">{n}</div>
+            <div class="mx-auto mt-2 h-px w-12 bg-flame"></div>
+            <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-white/50">{l}</div>
+          </div>
+        ))}
       </div>
     </div>
+    <p class="relative mx-auto mt-4 max-w-[1320px] text-center text-xs text-white/35">Real numbers from Florida's Best Pools — the South Florida pool company we run and rank.</p>
   </section>
 
   <!-- ===== PAIN ===== -->
-  <section class="mx-auto max-w-6xl px-5 py-20">
-    <p class="text-center font-semibold text-accent">The problem isn't your work.</p>
-    <h2 class="mx-auto mt-2 max-w-2xl text-center text-3xl font-bold sm:text-4xl">
-      You're the best in town. Google doesn't know it yet.
-    </h2>
-    <div class="mt-12 grid gap-6 sm:grid-cols-3">
-      <div class="rounded-2xl bg-paper p-6">
-        <div class="text-3xl">🕳️</div>
-        <h3 class="mt-3 font-bold">Invisible online</h3>
-        <p class="mt-2 text-sm text-ink/70">The guy with worse work but a better Google profile is taking the calls that should be yours. Ranking is a system — not luck, not who's oldest.</p>
-      </div>
-      <div class="rounded-2xl bg-paper p-6">
-        <div class="text-3xl">📵</div>
-        <h3 class="mt-3 font-bold">Leads slipping away</h3>
-        <p class="mt-2 text-sm text-ink/70">Every missed call dials the next name on the list. If capture and follow-up depend on whoever's near the phone, you're losing jobs you already paid to earn.</p>
-      </div>
-      <div class="rounded-2xl bg-paper p-6">
-        <div class="text-3xl">💸</div>
-        <h3 class="mt-3 font-bold">Agencies that don't get it</h3>
-        <p class="mt-2 text-sm text-ink/70">$5,000 builds, $2,000/mo retainers, jargon reports — and a site that still doesn't ring. You want a straight price and a phone that rings. Fair.</p>
+  <section class="bg-panel px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-flame">The problem isn't your work.</p>
+      <h2 class="mx-auto mt-3 max-w-2xl text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">
+        You're the best in town. Google doesn't know it yet.
+      </h2>
+      <div class="mt-14 grid gap-4 md:grid-cols-3">
+        {[
+          ['search', 'Invisible online', "The guy with worse work but a better Google profile is taking the calls that should be yours. Ranking is a system — not luck, not who's oldest."],
+          ['phone', 'Leads slipping away', "Every missed call dials the next name on the list. If capture and follow-up depend on whoever's near the phone, you're losing jobs you already paid to earn."],
+          ['dollar', "Agencies that don't get it", '$5,000 builds, $2,000/mo retainers, jargon reports — and a site that still doesn\'t ring. You want a straight price and a phone that rings. Fair.'],
+        ].map(([icon, title, body]) => (
+          <div class="rounded-[20px] border border-line bg-surface p-7">
+            <span class="inline-grid size-14 place-items-center rounded-2xl text-flame" style="background: rgba(231,63,47,0.1); border: 1.5px solid rgba(231,63,47,0.33)"><Icon name={icon} size={26} /></span>
+            <h3 class="mt-4 text-[20px] font-black text-white">{title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/60">{body}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- ===== THE OFFER ===== -->
-  <section id="included" class="bg-deep text-white">
-    <div class="mx-auto max-w-6xl px-5 py-20">
+  <!-- ===== THE OFFER (6-up perk grid) ===== -->
+  <section id="included" class="bg-black px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
       <div class="text-center">
-        <p class="font-semibold uppercase tracking-widest text-gold">The Goliath Growth System</p>
-        <h2 class="mx-auto mt-2 max-w-2xl text-3xl font-bold sm:text-4xl">
-          One system that turns your name into the first call.
+        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-gold">★ The Goliath Growth System</p>
+        <h2 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">
+          One system that turns your name into <span class="text-flame">the first call.</span>
         </h2>
-        <p class="mx-auto mt-3 max-w-xl text-white/70">Five things every service business needs to win online — built, wired together, and run for you.</p>
+        <p class="mx-auto mt-3 max-w-xl text-white/60">Everything a service business needs to win online — built, wired together, and run for you.</p>
       </div>
 
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {[
-          ['🌐', 'A website that books jobs', 'Fast, clean, one job: turn a visitor into a booked call. Loads in under a second.'],
-          ['🔍', 'Local SEO, managed monthly', 'Neighborhood-level targeting so you show up for "your trade near me." Worked every month, not set-and-forget.'],
-          ['📍', 'Google Business Profile', 'Optimized, posted to, and maintained. The map pack is where local jobs are won.'],
-          ['⭐', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work.'],
-          ['📞', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. Fast follow-up wins the job.'],
-          ['📊', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No vanity metrics, no jargon.'],
-        ].map(([icon, title, body]) => (
-          <div class="rounded-2xl bg-white/5 p-6 transition hover:bg-white/10">
-            <div class="text-3xl">{icon}</div>
-            <h3 class="mt-3 font-bold">{title}</h3>
-            <p class="mt-2 text-sm text-white/70">{body}</p>
+      <div class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {perks.map(([icon, color, title, body, stat, statLabel]) => (
+          <div class="group flex h-full flex-col overflow-hidden rounded-[20px] border border-line bg-surface p-7 transition hover:-translate-y-1">
+            <span class="inline-grid size-14 place-items-center rounded-2xl" style={`color:${color}; background:${color}1a; border:1.5px solid ${color}55`}><Icon name={icon} size={28} /></span>
+            <h3 class="mt-4 text-[20px] font-black text-white">{title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-white/60">{body}</p>
+            <div class="mt-5 flex items-end justify-between border-t border-line pt-4">
+              <div>
+                <div class="text-[26px] font-black" style={`color:${color}`}>{stat}</div>
+                <div class="text-[10px] uppercase tracking-[0.18em] text-white/45">{statLabel}</div>
+              </div>
+              <Icon name="arrow" size={20} class="text-white/30" />
+            </div>
           </div>
         ))}
       </div>
@@ -142,168 +160,156 @@ const faqItems = [
   </section>
 
   <!-- ===== PRICING / VALUE STACK ===== -->
-  <section id="pricing" class="bg-paper">
-    <div class="mx-auto max-w-6xl px-5 py-20">
-      <h2 class="text-center text-3xl font-bold sm:text-4xl">Add it up. Then look at the price.</h2>
-      <p class="mx-auto mt-3 max-w-xl text-center text-ink/70">
+  <section id="pricing" class="bg-panel px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
+      <h2 class="text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Add it up. Then look at the price.</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-white/60">
         Agencies charge $5,000+ to build and $2,000+/month to "manage." We built a leaner system and pass the savings straight to you.
       </p>
-      <div class="mt-12"><PricingCard /></div>
-      <p class="mx-auto mt-8 max-w-xl text-center text-sm text-ink/60">
+      <div class="mt-14"><PricingCard /></div>
+      <p class="mx-auto mt-8 max-w-xl text-center text-sm text-white/55">
         Bigger project — a custom app, an AI agent, automation? We build those too.
-        <a href="/contact" class="font-semibold text-accent">Tell us where it hurts →</a>
+        <a href="/contact" class="font-semibold text-flame">Tell us where it hurts →</a>
       </p>
     </div>
   </section>
 
   <!-- ===== FLAGSHIP PROOF: FLORIDA'S BEST POOLS ===== -->
-  <section class="mx-auto max-w-6xl px-5 py-20">
-    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+  <section class="bg-black px-5 py-24">
+    <div class="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <p class="font-semibold text-accent">We don't just talk. We rank our own company.</p>
-        <h2 class="mt-2 text-3xl font-bold sm:text-4xl">Florida's Best Pools</h2>
-        <p class="mt-4 text-ink/70">
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-flame">We don't just talk. We rank our own company.</p>
+        <h2 class="mt-3 font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Florida's Best Pools</h2>
+        <p class="mt-4 leading-relaxed text-white/65">
           Our founder Joe is a partner in a South Florida pool company. We put the exact same system to work on it —
           website, local SEO, Google profile, reviews. Today it owns the map in Boca Raton and Delray Beach.
           If it works for our own phone, it'll work for yours.
         </p>
 
         <div class="mt-8 grid grid-cols-2 gap-4">
-          <div class="rounded-2xl border border-ink/10 p-5">
-            <div class="text-3xl font-bold text-accent">#1</div>
-            <div class="mt-1 text-sm text-ink/60">on Google for <span class="font-medium text-ink">"best florida pools"</span> — up from #7</div>
-          </div>
-          <div class="rounded-2xl border border-ink/10 p-5">
-            <div class="text-3xl font-bold text-accent">#2</div>
-            <div class="mt-1 text-sm text-ink/60">for <span class="font-medium text-ink">"pool heater maintenance"</span> — 1,600 searches/mo</div>
-          </div>
-          <div class="rounded-2xl border border-ink/10 p-5">
-            <div class="text-3xl font-bold text-accent">Top 3</div>
-            <div class="mt-1 text-sm text-ink/60">across Boca Raton &amp; Delray Beach pool searches</div>
-          </div>
-          <div class="rounded-2xl border border-ink/10 p-5">
-            <div class="text-3xl font-bold text-gold">★ 5.0</div>
-            <div class="mt-1 text-sm text-ink/60">197 Google reviews and climbing</div>
-          </div>
+          {[['#e73f2f', '#1', 'on Google for "best florida pools" — up from #7'],
+            ['#e73f2f', '#2', 'for "pool heater maintenance" — 1,600 searches/mo'],
+            ['#e73f2f', 'Top 3', 'across Boca Raton & Delray Beach pool searches'],
+            ['#f0b45a', '★ 5.0', '197 Google reviews and climbing']].map(([color, n, l]) => (
+            <div class="rounded-2xl border border-line bg-surface p-5">
+              <div class="text-[28px] font-black" style={`color:${color}`}>{n}</div>
+              <div class="mt-1 text-sm text-white/55">{l}</div>
+            </div>
+          ))}
         </div>
-        <p class="mt-4 text-xs text-ink/40">Live Google rankings for floridasbestpools.com, mid-2026.</p>
+        <p class="mt-4 text-xs text-white/35">Live Google rankings for floridasbestpools.com, mid-2026.</p>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
-        <div class="overflow-hidden rounded-2xl">
-          <Image src={cleanWater} alt="Crystal-clear serviced pool water" class="h-full w-full object-cover" loading="lazy" />
-        </div>
-        <div class="mt-8 overflow-hidden rounded-2xl">
-          <Image src={techSkimming} alt="Technician skimming a pool" class="h-full w-full object-cover" loading="lazy" />
-        </div>
-        <div class="overflow-hidden rounded-2xl">
-          <Image src={techTesting} alt="Technician testing pool water chemistry" class="h-full w-full object-cover" loading="lazy" />
-        </div>
-        <div class="mt-8 overflow-hidden rounded-2xl">
-          <Image src={teamMarina} alt="The Florida's Best Pools team" class="h-full w-full object-cover" loading="lazy" />
-        </div>
+        <div class="overflow-hidden rounded-2xl border border-line"><Image src={cleanWater} alt="Crystal-clear serviced pool water" class="h-full w-full object-cover" loading="lazy" /></div>
+        <div class="mt-8 overflow-hidden rounded-2xl border border-line"><Image src={techSkimming} alt="Technician skimming a pool" class="h-full w-full object-cover" loading="lazy" /></div>
+        <div class="overflow-hidden rounded-2xl border border-line"><Image src={techTesting} alt="Technician testing pool water chemistry" class="h-full w-full object-cover" loading="lazy" /></div>
+        <div class="mt-8 overflow-hidden rounded-2xl border border-line"><Image src={teamMarina} alt="The Florida's Best Pools team" class="h-full w-full object-cover" loading="lazy" /></div>
       </div>
     </div>
   </section>
 
   <!-- ===== RISK REVERSAL ===== -->
-  <section class="bg-gold/10">
-    <div class="mx-auto flex max-w-4xl flex-col items-center gap-4 px-5 py-16 text-center">
-      <div class="text-5xl">🛡️</div>
-      <h2 class="text-3xl font-bold sm:text-4xl">The 90-Day Ring Guarantee</h2>
-      <p class="max-w-2xl text-lg text-ink/75">
+  <section class="border-y border-line bg-panel px-5 py-16">
+    <div class="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center">
+      <span class="grid size-16 place-items-center rounded-2xl text-gold" style="background: rgba(240,180,90,0.12); border: 1.5px solid rgba(240,180,90,0.4)"><Icon name="shield" size={32} /></span>
+      <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4vw, 40px)">The 90-Day Ring Guarantee</h2>
+      <p class="max-w-2xl text-[18px] leading-relaxed text-white/70">
         If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does.
         We take the risk so you don't have to. That's how sure we are.
       </p>
-      <a href={BOOKING_URL} class="mt-2 rounded-full bg-ink px-6 py-3 font-semibold text-white transition hover:bg-ink/90">
-        Book your free game plan →
+      <a href={BOOKING_URL} class="mt-2 inline-flex items-center gap-2 rounded-full bg-flame px-6 py-3 font-bold text-white transition hover:bg-flame-deep">
+        Book your free game plan <Icon name="arrow" size={16} />
       </a>
     </div>
   </section>
 
   <!-- ===== BEFORE / AFTER ===== -->
-  <section class="mx-auto max-w-5xl px-5 py-20">
-    <h2 class="text-center text-3xl font-bold sm:text-4xl">Two ways to do this.</h2>
-    <div class="mt-12 grid gap-6 md:grid-cols-2">
-      <div class="rounded-3xl border border-ink/10 p-8">
-        <p class="text-sm font-semibold uppercase tracking-wide text-ink/40">The old way</p>
-        <ul class="mt-4 space-y-3 text-ink/70">
-          <li class="flex gap-2"><span class="text-ink/30">✕</span> $5,000–$12,000 to build, $2,000+/mo to "manage"</li>
-          <li class="flex gap-2"><span class="text-ink/30">✕</span> Sold by a salesperson, built by a stranger overseas</li>
-          <li class="flex gap-2"><span class="text-ink/30">✕</span> Jargon reports you can't read</li>
-          <li class="flex gap-2"><span class="text-ink/30">✕</span> Locked in a 12-month contract</li>
-          <li class="flex gap-2"><span class="text-ink/30">✕</span> A pretty site that still doesn't ring</li>
-        </ul>
-      </div>
-      <div class="rounded-3xl border-2 border-accent bg-accent/5 p-8">
-        <p class="text-sm font-semibold uppercase tracking-wide text-accent">The Goliath way</p>
-        <ul class="mt-4 space-y-3 font-medium">
-          <li class="flex gap-2"><span class="text-accent">✓</span> ${PRICING.setup.toLocaleString()} to build, ${PRICING.monthly}/mo — all in</li>
-          <li class="flex gap-2"><span class="text-accent">✓</span> Built and run by the operator who ranks his own business</li>
-          <li class="flex gap-2"><span class="text-accent">✓</span> One plain-English report a month</li>
-          <li class="flex gap-2"><span class="text-accent">✓</span> Month to month — you own everything</li>
-          <li class="flex gap-2"><span class="text-accent">✓</span> A system built to ring the phone, guaranteed</li>
-        </ul>
+  <section class="bg-black px-5 py-24">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Two ways to do this.</h2>
+      <div class="mt-14 grid gap-5 md:grid-cols-2">
+        <div class="rounded-[24px] border border-line bg-surface p-8">
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-white/40">The old way</p>
+          <ul class="mt-5 space-y-3 text-white/60">
+            {['$5,000–$12,000 to build, $2,000+/mo to "manage"', 'Sold by a salesperson, built by a stranger overseas', "Jargon reports you can't read", 'Locked in a 12-month contract', "A pretty site that still doesn't ring"].map((t) => (
+              <li class="flex gap-2.5"><span class="text-white/25">✕</span> {t}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-[24px] border-2 border-flame bg-surface p-8" style="box-shadow: 0 0 0 1px rgba(231,63,47,0.33), 0 30px 70px rgba(231,63,47,0.13)">
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-flame">The Goliath way</p>
+          <ul class="mt-5 space-y-3 font-medium text-white">
+            {[`$${PRICING.setup.toLocaleString()} to build, $${PRICING.monthly}/mo — all in`, 'Built and run by the operator who ranks his own business', 'One plain-English report a month', 'Month to month — you own everything', 'A system built to ring the phone, guaranteed'].map((t) => (
+              <li class="flex gap-2.5"><span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-flame text-white"><Icon name="check" size={9} /></span> {t}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROCESS ===== -->
-  <section class="bg-paper">
-    <div class="mx-auto max-w-6xl px-5 py-20">
-      <h2 class="text-center text-3xl font-bold sm:text-4xl">Live in about two weeks.</h2>
-      <div class="mt-12 grid gap-6 sm:grid-cols-4">
-        {[
-          ['01', 'Free game plan', 'A 30-minute call. Your market, your bottlenecks, your fastest wins — no pitch theater.'],
-          ['02', 'We build', 'Website up, Google profile tuned, reviews and lead capture switched on. ~2 weeks.'],
-          ['03', 'Launch', 'You go live and start showing up where local jobs are won.'],
-          ['04', 'We run it', 'SEO, reviews, marketing — handled monthly, reported in plain English.'],
-        ].map(([num, title, body]) => (
-          <div class="rounded-2xl border border-ink/10 bg-white p-6">
-            <div class="text-sm font-bold text-accent">{num}</div>
-            <h3 class="mt-1 font-bold">{title}</h3>
-            <p class="mt-2 text-sm text-ink/70">{body}</p>
-          </div>
-        ))}
+  <!-- ===== PROCESS (milestone rail) ===== -->
+  <section class="bg-panel px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-flame">How it works</p>
+      <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Live in about two weeks.</h2>
+      <div class="relative mt-16">
+        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: #262626"></div>
+        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: linear-gradient(90deg, #e73f2f 0%, #937bfe 55%, #f0b45a 100%)"></div>
+        <div class="relative grid gap-10 md:grid-cols-4">
+          {milestones.map(([num, color, title, body]) => (
+            <div class="text-center">
+              <div class="mx-auto grid size-[72px] place-items-center rounded-full text-[18px] font-black" style={`background:#1a1a1a; border:4px solid ${color}; color:${color}`}>{num}</div>
+              <h3 class="mt-4 text-[17px] font-bold uppercase tracking-[0.08em] text-white">{title}</h3>
+              <p class="mt-2 text-[13px] leading-relaxed text-white/55">{body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FOUNDER ===== -->
-  <section class="mx-auto max-w-4xl px-5 py-20">
-    <div class="flex flex-col items-center gap-6 text-center">
-      <div class="size-28 overflow-hidden rounded-full ring-4 ring-paper">
+  <section class="bg-black px-5 py-24">
+    <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+      <div class="size-28 overflow-hidden rounded-full ring-4 ring-flame/30">
         <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" loading="lazy" />
       </div>
-      <blockquote class="max-w-2xl text-xl font-medium">
+      <blockquote class="max-w-2xl text-[22px] font-medium leading-relaxed text-white">
         "I've spent 14 years running real businesses — including a pool company we ranked to #1 in South Florida
         ourselves. I know what it's like to lose a job because your site looked like 2009 and your phone rang while
         you were on a roof. That's exactly what this fixes."
       </blockquote>
-      <p class="text-sm text-ink/60">Joe Ford, founder — Goliath Solutions</p>
-      <a href="/about" class="font-semibold text-accent">Read the story →</a>
+      <p class="text-sm text-white/50">Joe Ford, founder — Goliath Solutions</p>
+      <a href="/about" class="inline-flex items-center gap-1.5 font-semibold text-flame">Read the story <Icon name="arrow" size={15} /></a>
     </div>
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="bg-paper">
-    <div class="mx-auto max-w-6xl px-5 py-20">
-      <h2 class="text-center text-3xl font-bold sm:text-4xl">Straight answers.</h2>
-      <div class="mt-10"><FAQ items={faqItems} /></div>
+  <section class="bg-panel px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-flame">★ Straight answers</p>
+      <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(30px, 4.5vw, 44px)">Questions answered.</h2>
+      <div class="mt-12"><FAQ items={faqItems} /></div>
     </div>
   </section>
 
-  <!-- ===== URGENCY + FINAL CTA ===== -->
-  <section class="bg-deep text-center text-white">
-    <div class="mx-auto max-w-3xl px-5 py-20">
-      <p class="font-semibold uppercase tracking-widest text-gold">We take on a handful of new builds a month</p>
-      <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Let's make your business the first call in town.</h2>
-      <p class="mt-3 text-white/70">
-        Free game plan. No pressure. If we're not the right fit, we'll tell you who is. Backed by our 90-Day Ring Guarantee.
-      </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href={BOOKING_URL} class="rounded-full bg-accent px-6 py-3 text-lg font-semibold text-white transition hover:bg-accent/90">Claim your free game plan →</a>
-        <a href="/contact" class="rounded-full border border-white/30 px-6 py-3 text-lg font-semibold transition hover:bg-white/10">Get a quote</a>
+  <!-- ===== FINAL CTA ===== -->
+  <section class="bg-black px-5 py-24">
+    <div class="relative mx-auto max-w-[1100px] overflow-hidden rounded-[32px] p-10 text-center md:p-16" style="background: linear-gradient(135deg, #e73f2f 0%, #b72b1f 100%); box-shadow: 0 40px 80px rgba(231,63,47,0.4)">
+      <div class="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full" style="background: rgba(255,255,255,0.08)"></div>
+      <div class="pointer-events-none absolute -bottom-32 -left-20 size-80 rounded-full" style="background: rgba(255,255,255,0.06)"></div>
+      <div class="relative">
+        <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-white/80">★ We take a handful of new builds a month ★</p>
+        <h2 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.02em] text-white" style="font-size: clamp(32px, 6vw, 60px)">Make your business the first call in town.</h2>
+        <p class="mx-auto mt-4 max-w-xl text-[17px] text-white/85">
+          Free game plan. No pressure. If we're not the right fit, we'll tell you who is. Backed by our 90-Day Ring Guarantee.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-black px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-black/80">Claim your free game plan <Icon name="arrow" size={17} /></a>
+          <a href="/contact" class="inline-flex items-center rounded-full border border-white/50 px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10">Get a quote</a>
+        </div>
       </div>
     </div>
   </section>

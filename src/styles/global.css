@@ -1,20 +1,47 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-var.woff2") format("woff2");
+}
+
 @theme {
-  --color-accent: #0071e3;
-  --color-accent-soft: #4ea3f5;
-  --color-ink: #1d1d1f;
-  --color-paper: #f5f5f7;
-  --color-gold: #f5a623;
-  --color-deep: #071b2f;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Dark facelift palette (black + signature flame red + purple/gold accents) */
+  --color-flame: #e73f2f;
+  --color-flame-deep: #b72b1f;
+  --color-grape: #937bfe;
+  --color-grape-deep: #5327dc;
+  --color-gold: #f0b45a;
+  --color-gold-deep: #c98a34;
+  --color-panel: #121317;
+  --color-surface: #1a1a1a;
+  --color-line: #262626;
+  --color-hair: #3b3c3f;
+  --color-ash: #c9c9cc;
+
+  /* legacy accent kept so any un-migrated class still resolves */
+  --color-accent: #e73f2f;
+  --color-accent-soft: #937bfe;
+  --color-ink: #1a1a1a;
+  --color-paper: #121317;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  background: #000;
 }
 
-/* One page-load reveal, CSS-only (no JS shipped). Respects reduced-motion. */
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* Page-load reveal + odometer helpers, CSS-only. Respects reduced-motion. */
 @media (prefers-reduced-motion: no-preference) {
   @keyframes rise {
     from { opacity: 0; transform: translateY(16px); }

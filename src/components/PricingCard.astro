@@ -1,5 +1,6 @@
 ---
 import { PRICING, BOOKING_URL } from '../config';
+import Icon from './Icon.astro';
 
 // Hormozi value stack: anchor each deliverable's standalone value, sum it,
 // then reveal the real price. Numbers are honest local-market equivalents.
@@ -11,48 +12,53 @@ const stack = [
   ['Monthly marketing + a plain-English report', '$1,000/mo'],
 ];
 ---
-<div class="mx-auto max-w-xl overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-2xl shadow-ink/10">
-  <div class="bg-deep px-8 py-6 text-center text-white">
-    <p class="text-sm font-semibold uppercase tracking-widest text-gold">The Goliath Growth System</p>
-    <p class="mt-1 text-white/70">Everything below, run for you — one system, one price.</p>
+<div class="mx-auto max-w-xl overflow-hidden rounded-[24px] border border-flame/40 bg-surface" style="box-shadow: 0 0 0 1px rgba(231,63,47,0.33), 0 30px 70px rgba(231,63,47,0.13)">
+  <div class="h-1.5 w-full" style="background: linear-gradient(90deg, #e73f2f 0%, #937bfe 100%)"></div>
+
+  <div class="px-8 py-6 text-center">
+    <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-gold">The Goliath Growth System</p>
+    <p class="mt-1 text-sm text-white/60">Everything below, run for you — one system, one price.</p>
   </div>
 
-  <div class="px-8 pt-8">
+  <div class="px-8">
     <ul class="space-y-3 text-sm">
       {stack.map(([item, value]) => (
-        <li class="flex items-start justify-between gap-4 border-b border-ink/5 pb-3">
-          <span class="flex gap-2"><span class="text-accent">✓</span>{item}</span>
-          <span class="shrink-0 text-ink/40 line-through">{value}</span>
+        <li class="flex items-start justify-between gap-4 border-b border-line pb-3">
+          <span class="flex gap-2.5 text-white/90">
+            <span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-flame text-white"><Icon name="check" size={9} /></span>
+            {item}
+          </span>
+          <span class="shrink-0 text-white/35 line-through">{value}</span>
         </li>
       ))}
     </ul>
 
     <div class="mt-6 flex items-baseline justify-between">
-      <span class="font-semibold text-ink/60">Real-world value</span>
-      <span class="text-xl font-bold text-ink/40 line-through">$6,100+ up front, $2,700/mo</span>
+      <span class="text-sm font-semibold text-white/50">Real-world value</span>
+      <span class="text-lg font-bold text-white/35 line-through">$6,100+ up front, $2,700/mo</span>
     </div>
 
-    <div class="mt-6 rounded-2xl bg-paper p-6 text-center">
-      <p class="text-sm font-semibold uppercase tracking-wide text-accent">You pay</p>
+    <div class="mt-6 rounded-2xl border border-line bg-panel p-6 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-flame">You pay</p>
       <div class="mt-2 flex items-end justify-center gap-2">
-        <span class="text-5xl font-bold">${PRICING.setup.toLocaleString()}</span>
-        <span class="pb-1 text-ink/60">to build</span>
-        <span class="px-2 pb-1 text-2xl text-ink/30">+</span>
-        <span class="text-5xl font-bold">${PRICING.monthly}</span>
-        <span class="pb-1 text-ink/60">/mo</span>
+        <span class="text-5xl font-black tracking-[-0.03em] text-white">${PRICING.setup.toLocaleString()}</span>
+        <span class="pb-1 text-sm text-white/50">to build</span>
+        <span class="px-1 pb-1 text-2xl text-white/25">+</span>
+        <span class="text-5xl font-black tracking-[-0.03em] text-white">${PRICING.monthly}</span>
+        <span class="pb-1 text-sm text-white/50">/mo</span>
       </div>
-      <p class="mt-2 text-sm text-ink/60">Less than one lost job a month.</p>
+      <p class="mt-2 text-sm text-white/50">Less than one lost job a month.</p>
     </div>
 
-    <a href={BOOKING_URL} class="mt-6 block rounded-full bg-accent py-4 text-center text-lg font-semibold text-white transition hover:bg-accent/90">
-      Claim your free game plan →
+    <a href={BOOKING_URL} class="mt-6 flex items-center justify-center gap-2 rounded-full bg-flame py-4 text-lg font-bold text-white transition hover:bg-flame-deep">
+      Claim your free game plan <Icon name="arrow" size={18} />
     </a>
   </div>
 
-  <div class="mt-6 flex items-center gap-3 bg-gold/10 px-8 py-4 text-sm">
-    <span class="text-2xl">🛡️</span>
-    <p><span class="font-bold">90-Day Ring Guarantee:</span> if your phone isn't ringing with new leads in 90 days, we work free until it does.</p>
+  <div class="mt-6 flex items-center gap-3 border-t border-line bg-gold/10 px-8 py-4 text-sm text-white/85">
+    <Icon name="shield" size={26} class="shrink-0 text-gold" />
+    <p><span class="font-bold text-white">90-Day Ring Guarantee:</span> if your phone isn't ringing with new leads in 90 days, we work free until it does.</p>
   </div>
 
-  <p class="px-8 pb-8 pt-4 text-center text-xs text-ink/50">Month to month. No long contracts. You own everything. Cancel anytime.</p>
+  <p class="px-8 pb-8 pt-4 text-center text-xs text-white/40">Month to month. No long contracts. You own everything. Cancel anytime.</p>
 </div>
