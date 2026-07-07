@@ -15,29 +15,57 @@ import techTesting from '../assets/proof/tech-water-testing.jpg';
 import teamMarina from '../assets/proof/team-marina-trio.jpg';
 
 const perks = [
-  ['globe', '#1196cc', 'A website that books jobs', 'Fast, clean, one job: turn a visitor into a booked call. Loads in under two seconds.', '<2s', 'Load time'],
-  ['search', '#0d7aa8', 'Local SEO, managed monthly', 'Neighborhood-level targeting so you show up for "your trade near me." Worked every month.', '#1', 'Local goal'],
-  ['pin', '#f6bb06', 'Google Business Profile', 'Optimized, posted to, and maintained. The map pack is where local jobs are won.', 'Map', 'Pack owned'],
-  ['star', '#002d5e', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work.', '5.0', 'Star target'],
-  ['phone', '#1196cc', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. Fast follow-up wins the job.', '0', 'Leads lost'],
-  ['chart', '#f6bb06', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. No vanity metrics, no jargon.', '1/mo', 'Clear report'],
+  ['search', '#0d7aa8', 'Local SEO & the Map Pack', 'The top 3 of Google Maps is where local jobs are won. Hyper-local pages, worked every month — this is the channel that never stops ringing once you own it.', '#1', 'The goal'],
+  ['globe', '#1196cc', 'A website that books jobs', 'Not a brochure — a 24/7 lead machine. Call-first buttons, quote form, built to book the 9pm emergency caller. Loads in under two seconds.', '<2s', 'Load time'],
+  ['pin', '#f6bb06', 'Google Business Profile', 'Optimized, posted to, and maintained — because the map pack is won or lost on your profile, not your website.', 'Map', 'Pack owned'],
+  ['star', '#002d5e', 'Reviews on autopilot', 'Every finished job triggers a review ask that doesn’t feel spammy. Your rating climbs while you work. Ours hit 200.', '5.0', 'Star target'],
+  ['phone', '#1196cc', 'Lead capture + follow-up', 'Quote forms and call tracking wired so nothing slips. The first company to respond wins the job — that’ll be you.', '0', 'Leads lost'],
   ['target', '#0d7aa8', 'Local Service Ads', 'Google-Guaranteed leads at the very top of search. We set them up, manage the budget, and dispute junk — you pay per lead, not per click.', 'PPL', 'Pay per lead'],
+  ['chart', '#f6bb06', 'Plain-English reporting', 'One monthly report: calls, leads, rankings, reviews. If a number doesn’t connect to booked work, we don’t report it.', '1/mo', 'Real numbers'],
 ];
 
-const milestones = [
-  ['01', '#1196cc', 'Free game plan', 'A 30-minute call. Your market, your bottlenecks, your fastest wins — no pitch theater.'],
-  ['02', '#1196cc', 'We build', 'Website up, Google profile tuned, reviews and lead capture switched on. ~2 weeks.'],
-  ['03', '#0d7aa8', 'Launch', 'You go live and start showing up where local jobs are won.'],
-  ['04', '#f6bb06', 'We run it', 'SEO, reviews, marketing — handled monthly, reported in plain English.'],
+const phases = [
+  {
+    num: '01', when: 'WEEK 1', color: '#1196cc', title: 'Audit & game plan',
+    body: "A 30-minute call where we reverse-engineer your business: your service area, your average ticket, where your leads actually come from today. Then we audit your site and Google profile for the leaks — broken tracking, keyword gaps, competitor openings.",
+    payoff: 'You walk away with a custom game plan for your market. Yours to keep, even if we never work together.',
+  },
+  {
+    num: '02', when: 'DAYS 7–30', color: '#1196cc', title: 'Foundation build',
+    body: 'We rebuild the stack: conversion-built site live, Google Business Profile optimized, review engine and lead tracking switched on, local service pages launched.',
+    payoff: 'Your new site and profile start converting the demand you already have — from day one.',
+  },
+  {
+    num: '03', when: 'DAYS 31–90', color: '#0d7aa8', title: 'Scale & optimize',
+    body: "Now we pour fuel on what's working and cut what isn't. Reviews compound, rankings climb, follow-up tightens. This is the window our 90-Day Ring Guarantee covers: if the phone isn't ringing, we work free until it is.",
+    payoff: 'Lead flow you can feel — and a report you can actually read.',
+  },
+  {
+    num: '04', when: 'MONTH 4+', color: '#f6bb06', title: 'Own the map',
+    body: "Real map-pack movement lands months 4–6, depending on how competitive your market is. Anyone promising the 3-pack in 30 days is lying to you. When it lands, we expand — more neighborhoods, more service pages, more of the metro.",
+    payoff: 'By the time competitors figure out what you did, you already own the market.',
+  },
+];
+
+const compareRows = [
+  ['Contract', '12–24 month lock-in', 'Month to month. Cancel anytime.'],
+  ['Built by', 'Career marketers who’ve never run a crew', 'An operator who ranks his own company'],
+  ['Your contact', 'An account manager reading a script', 'Joe — the guy who built the system'],
+  ['Proof', 'Stock-photo portfolios', 'Our own company: #1 on Google, 200 reviews'],
+  ['Reporting', 'Impressions, reach, and jargon', 'Calls, leads, rankings — plain English'],
+  ['Pricing', '“Book a call to find out”', `$${PRICING.setup.toLocaleString()} build + $${PRICING.monthly}/mo, right on the site`],
+  ['Who owns your stuff', 'They do — leave and lose it', 'You do. Domain, site, profile, reviews.'],
 ];
 
 const faqItems = [
-  { q: "What if I already have a website?", a: "Good — we'll show you exactly why it isn't ringing the phone, then rebuild it into something that does. You keep your domain and content; we make it work." },
-  { q: 'How fast will I see results?', a: 'Your site launches in about two weeks. Google Business optimization and reviews start working day one. Local ranking movement typically shows within 60–90 days — which is why we back it with our 90-Day Ring Guarantee.' },
-  { q: 'Do I own everything?', a: 'Yes. Your domain, your site, your Google profile, your data, your reviews. If you ever leave, it all goes with you. No hostage situations.' },
-  { q: "Is this just another agency?", a: "No. We run our own businesses — including a South Florida pool company we ranked to the top of Google ourselves. You deal with the operator who built it, not an account manager reading a script." },
-  { q: 'Is there a contract?', a: 'Month to month. We keep your business by earning it. The only lock-in is results.' },
+  { q: "How are you different from every agency that's pitched me?", a: "One thing, mostly: we're operators. Our founder ran real businesses for 14 years and is a partner in Florida's Best Pools — a South Florida pool company we ranked to #1 on Google with 200 five-star reviews, using the exact system on this page. We don't sell you a playbook we read about. We sell you the one that runs our own phone." },
+  { q: 'How long before my phone rings?', a: "Straight answer: your new site and Google profile start converting existing demand the day they go live — about two weeks in. Reviews and lead capture work from day one. Real map-pack movement takes months 4–6 depending on your market, and anyone promising it faster is lying. That's why the 90-Day Ring Guarantee exists: new leads within 90 days or we work free until you get them." },
+  { q: "I've been burned by an agency before. Why should I trust you?", a: "That's exactly why Goliath is built the way it is. Month to month — leaving is easy, so we have to earn every month. Transparent pricing — no discovery-call ambush. You own everything — domain, site, profile, reviews. And the proof isn't a client logo wall, it's our own company ranked #1. The risk sits on our side of the table, where it belongs." },
+  { q: 'What does it cost?', a: `$${PRICING.setup.toLocaleString()} to build, $${PRICING.monthly}/month to run — it's printed on this page because "call for pricing" is an agency game. The monthly covers the whole system: hosting, local SEO, Google profile, reviews, lead capture, and the monthly report. Local Service Ads budget is separate — that money goes to Google, not us.` },
+  { q: 'Do I have to sign a contract?', a: "No. Month to month, cancel anytime. We keep your business by making your phone ring, not by making you sign a 12-month agreement on day one." },
+  { q: 'Do you do social media, video, or Google Ads?', a: "The core system — site, local SEO, Google profile, reviews, lead capture, Local Service Ads — is us. Social media marketing, video production, and Google Ads run through vetted partners we manage, added only when your market actually calls for them. You get one point of contact either way: us." },
   { q: 'What trades do you work with?', a: 'Pool service, plumbing, roofing, HVAC, electrical, landscaping, contractors, adjusters — if you run crews and answer phones, this was built for you.' },
+  { q: 'Do I own everything?', a: 'Yes. Your domain, your site, your Google profile, your data, your reviews. If you ever leave, it all goes with you. No hostage situations.' },
 ];
 ---
 <Layout
@@ -154,13 +182,13 @@ const faqItems = [
     <div class="mx-auto max-w-[1320px]">
       <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">The problem isn't your work.</p>
       <h2 class="mx-auto mt-3 max-w-2xl text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">
-        You're the best in town. Google doesn't know it yet.
+        You're the best in town.<br />Google doesn't know it yet.
       </h2>
       <div class="mt-14 grid gap-4 md:grid-cols-3">
         {[
-          ['search', 'Invisible online', "The guy with worse work but a better Google profile is taking the calls that should be yours. Ranking is a system — not luck, not who's oldest."],
-          ['phone', 'Leads slipping away', "Every missed call dials the next name on the list. If capture and follow-up depend on whoever's near the phone, you're losing jobs you already paid to earn."],
-          ['dollar', "Agencies that don't get it", '$5,000 builds, $2,000/mo retainers, jargon reports — and a site that still doesn\'t ring. You want a straight price and a phone that rings. Fair.'],
+          ['search', 'The worse guy is winning', "Somewhere in your town, a competitor with sloppier work and a better Google profile is booking the jobs that should be yours. Ranking isn't luck and it isn't seniority. It's a system — and he has one."],
+          ['phone', 'Every missed call is a paid-for loss', "A homeowner with water on the floor doesn't leave voicemails. They call the next name on the list. If capture and follow-up depend on whoever's near the phone, you're paying to generate leads for your competitors."],
+          ['dollar', "Agencies that never swung a hammer", '$5,000 builds. $2,000-a-month retainers. Reports full of "impressions." All from people who\'ve never run a crew, priced a job, or taken the 9pm emergency call. You want a straight price and a phone that rings. Fair.'],
         ].map(([icon, title, body]) => (
           <div class="rounded-[20px] border border-line bg-mist p-7">
             <span class="inline-grid size-14 place-items-center rounded-2xl bg-cyan/10 text-cyan" style="border: 1.5px solid rgba(17,150,204,0.25)"><Icon name={icon} size={26} /></span>
@@ -172,15 +200,65 @@ const faqItems = [
     </div>
   </section>
 
-  <!-- ===== THE OFFER (6-up perk grid) ===== -->
+  <!-- ===== WHY GOLIATH EXISTS (operator story) ===== -->
+  <section class="bg-navy px-5 py-24 text-white">
+    <div class="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div class="order-2 lg:order-1">
+        <div class="relative mx-auto max-w-md overflow-hidden rounded-[24px] shadow-2xl shadow-black/40">
+          <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="w-full object-cover" loading="lazy" />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep/90 to-transparent p-5">
+            <p class="text-sm font-bold">Joe Ford</p>
+            <p class="text-xs text-white/70">Founder, Goliath Solutions · Partner, Florida's Best Pools</p>
+          </div>
+        </div>
+        <div class="mx-auto mt-6 grid max-w-md grid-cols-3 gap-3 text-center">
+          {[['14 yrs', 'operating'], ['#1', 'own co. ranked'], ['200', '5-star reviews']].map(([n, l]) => (
+            <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+              <div class="text-[22px] font-black text-gold">{n}</div>
+              <div class="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/60">{l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold">★ Why Goliath exists</p>
+        <h2 class="mt-3 font-black leading-[1.02] tracking-[-0.01em]" style="font-size: clamp(30px, 4.5vw, 46px)">
+          Built by an operator<br />who actually <span class="text-cyan">ran the business.</span>
+        </h2>
+        <div class="mt-6 space-y-4 text-[16px] leading-relaxed text-white/80">
+          <p>
+            Before Goliath, Joe Ford spent 14 years running real companies — hiring crews, chasing invoices,
+            answering the phone at dinner. He's a partner in <span class="font-semibold text-white">Florida's Best Pools</span>,
+            a 40-year family pool operation in South Florida, and he watched good operators all around him pay
+            $2,000 a month for jargon reports that never made the phone ring.
+          </p>
+          <p>
+            So he built the system himself — website, local SEO, Google profile, reviews — for his own company first.
+            Today Florida's Best Pools sits at <span class="font-semibold text-white">#1 on Google in its market</span> with
+            <span class="font-semibold text-white">200 five-star reviews</span>, pulling
+            <span class="font-semibold text-white">60+ organic calls and 30+ web leads a month</span> without buying a single click.
+            Then friends in the trades started asking for the same thing. That became Goliath.
+          </p>
+          <p class="font-semibold text-white">
+            When you work with us, you're not getting an account manager. You're getting the operator who's been
+            in your seat — running the exact system you're buying, on his own phone, every day.
+          </p>
+        </div>
+        <a href="/about" class="mt-6 inline-flex items-center gap-1.5 font-semibold text-cyan">Read the full story <Icon name="arrow" size={15} /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE OFFER (perk grid) ===== -->
   <section id="included" class="bg-mist px-5 py-24">
     <div class="mx-auto max-w-[1320px]">
       <div class="text-center">
         <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-deep">★ The Goliath Growth System</p>
         <h2 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">
-          One system that turns your name into <span class="text-cyan">the first call.</span>
+          We don't sell impressions.<br />We sell <span class="text-cyan">booked jobs.</span>
         </h2>
-        <p class="mx-auto mt-3 max-w-xl text-mute">Everything a service business needs to win online — built, wired together, and run for you.</p>
+        <p class="mx-auto mt-3 max-w-xl text-mute">No brand engagement. No reach. Seven weapons aimed at the only channels that actually move the phone in local services — built, wired together, and run for you.</p>
       </div>
 
       <div class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -201,36 +279,22 @@ const faqItems = [
       </div>
 
       <p class="mx-auto mt-10 max-w-2xl text-center text-sm text-mute">
-        Need more firepower? Through vetted partners we also run <span class="font-semibold text-navy">social media marketing</span>, <span class="font-semibold text-navy">video production</span>, and <span class="font-semibold text-navy">Google Ads</span> — added only if you need them.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== PRICING / VALUE STACK ===== -->
-  <section id="pricing" class="bg-paper px-5 py-24">
-    <div class="mx-auto max-w-[1320px]">
-      <h2 class="text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Add it up. Then look at the price.</h2>
-      <p class="mx-auto mt-3 max-w-xl text-center text-mute">
-        Agencies charge $5,000+ to build and $2,000+/month to "manage." We built a leaner system and pass the savings straight to you.
-      </p>
-      <div class="mt-14"><PricingCard /></div>
-      <p class="mx-auto mt-8 max-w-xl text-center text-sm text-mute">
-        Bigger project — a custom app, an AI agent, automation? We build those too.
-        <a href="/contact" class="font-semibold text-cyan-deep">Tell us where it hurts →</a>
+        Need more firepower? Through vetted partners we also run <span class="font-semibold text-navy">social media marketing</span>, <span class="font-semibold text-navy">video production</span>, and <span class="font-semibold text-navy">Google Ads</span> — added only if your market calls for them. One point of contact either way: us.
       </p>
     </div>
   </section>
 
   <!-- ===== FLAGSHIP PROOF: FLORIDA'S BEST POOLS ===== -->
-  <section class="bg-mist px-5 py-24">
+  <section class="bg-paper px-5 py-24">
     <div class="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">We don't just talk. We rank our own company.</p>
-        <h2 class="mt-3 font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Florida's Best Pools</h2>
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ Proof, not promises</p>
+        <h2 class="mt-3 font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">We eat our own cooking.</h2>
         <p class="mt-4 leading-relaxed text-mute">
-          Our founder Joe is a partner in a South Florida pool company. We put the exact same system to work on it —
-          website, local SEO, Google profile, reviews. Today it owns the map in Boca Raton and Delray Beach.
-          If it works for our own phone, it'll work for yours.
+          Every claim on this page runs live on <span class="font-semibold text-navy">Florida's Best Pools</span> — the
+          pool company our founder is a partner in. Same website playbook. Same local SEO. Same review engine.
+          It owns the map in Boca Raton and Delray Beach, and the phone doesn't stop.
+          If it works for our own money, it'll work for yours.
         </p>
 
         <div class="mt-8 grid grid-cols-2 gap-4">
@@ -238,13 +302,14 @@ const faqItems = [
             ['#1196cc', '#2', 'for "pool heater maintenance" — 1,600 searches/mo'],
             ['#1196cc', 'Top 3', 'across Boca Raton & Delray Beach pool searches'],
             ['#a37c08', '★ 5.0', '200 Google reviews and climbing']].map(([color, n, l]) => (
-            <div class="rounded-2xl border border-line bg-paper p-5">
+            <div class="rounded-2xl border border-line bg-mist p-5">
               <div class="text-[28px] font-black" style={`color:${color}`}>{n}</div>
               <div class="mt-1 text-sm text-mute">{l}</div>
             </div>
           ))}
         </div>
         <p class="mt-4 text-xs text-mute/80">Live Google rankings for floridasbestpools.com, mid-2026.</p>
+        <a href="/work" class="mt-5 inline-flex items-center gap-1.5 font-semibold text-cyan-deep">See the full case file <Icon name="arrow" size={15} /></a>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
@@ -256,6 +321,21 @@ const faqItems = [
     </div>
   </section>
 
+  <!-- ===== PRICING / VALUE STACK ===== -->
+  <section id="pricing" class="bg-mist px-5 py-24">
+    <div class="mx-auto max-w-[1320px]">
+      <h2 class="text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">No "call for pricing" games.</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-mute">
+        Agencies charge $5,000+ to build and $2,000+/month to "manage." We built a leaner system, priced it for a working company, and printed it right here.
+      </p>
+      <div class="mt-14"><PricingCard /></div>
+      <p class="mx-auto mt-8 max-w-xl text-center text-sm text-mute">
+        Bigger project — a custom app, an AI agent, automation? We build those too.
+        <a href="/contact" class="font-semibold text-cyan-deep">Tell us where it hurts →</a>
+      </p>
+    </div>
+  </section>
+
   <!-- ===== RISK REVERSAL ===== -->
   <section class="bg-navy px-5 py-16 text-white">
     <div class="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center">
@@ -263,7 +343,7 @@ const faqItems = [
       <h2 class="font-black tracking-[-0.01em]" style="font-size: clamp(28px, 4vw, 40px)">The 90-Day Ring Guarantee</h2>
       <p class="max-w-2xl text-[18px] leading-relaxed text-white/80">
         If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does.
-        We take the risk so you don't have to. That's how sure we are.
+        You've carried enough risk for other people's marketing. This time it sits on our side of the table.
       </p>
       <a href={BOOKING_URL} class="mt-2 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-bold text-navy transition hover:bg-white">
         Book your free game plan <Icon name="arrow" size={16} />
@@ -271,92 +351,105 @@ const faqItems = [
     </div>
   </section>
 
-  <!-- ===== BEFORE / AFTER ===== -->
+  <!-- ===== THE METHOD (4 phases) ===== -->
   <section class="bg-paper px-5 py-24">
-    <div class="mx-auto max-w-5xl">
-      <h2 class="text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Two ways to do this.</h2>
-      <div class="mt-14 grid gap-5 md:grid-cols-2">
-        <div class="rounded-[24px] border border-line bg-mist p-8">
-          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-mute">The old way</p>
-          <ul class="mt-5 space-y-3 text-mute">
-            {['$5,000–$12,000 to build, $2,000+/mo to "manage"', 'Sold by a salesperson, built by a stranger overseas', "Jargon reports you can't read", 'Locked in a 12-month contract', "A pretty site that still doesn't ring"].map((t) => (
-              <li class="flex gap-2.5"><span class="text-mute/40">✕</span> {t}</li>
-            ))}
-          </ul>
-        </div>
-        <div class="rounded-[24px] border-2 border-cyan bg-paper p-8 shadow-lg shadow-cyan/10">
-          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-deep">The Goliath way</p>
-          <ul class="mt-5 space-y-3 font-medium text-navy">
-            {[`$${PRICING.setup.toLocaleString()} to build, $${PRICING.monthly}/mo — all in`, 'Built and run by the operator who ranks his own business', 'One plain-English report a month', 'Month to month — you own everything', 'A system built to ring the phone, guaranteed'].map((t) => (
-              <li class="flex gap-2.5"><span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-cyan text-white"><Icon name="check" size={9} /></span> {t}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROCESS (milestone rail) ===== -->
-  <section class="bg-mist px-5 py-24">
     <div class="mx-auto max-w-[1320px]">
-      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">How it works</p>
-      <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Live in about two weeks.</h2>
-      <div class="relative mt-16">
-        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block bg-line"></div>
-        <div class="absolute left-0 right-0 top-9 hidden h-1.5 rounded-full md:block" style="background: linear-gradient(90deg, #1196cc 0%, #0d7aa8 55%, #f6bb06 100%)"></div>
-        <div class="relative grid gap-10 md:grid-cols-4">
-          {milestones.map(([num, color, title, body]) => (
-            <div class="text-center">
-              <div class="mx-auto grid size-[72px] place-items-center rounded-full bg-paper text-[18px] font-black" style={`border:4px solid ${color}; color:${color}`}>{num}</div>
-              <h3 class="mt-4 text-[17px] font-bold uppercase tracking-[0.08em] text-navy">{title}</h3>
-              <p class="mt-2 text-[13px] leading-relaxed text-mute">{body}</p>
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ The Goliath method</p>
+      <h2 class="mx-auto mt-3 max-w-2xl text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">
+        How we make you <span class="text-cyan">the obvious choice</span> in your market.
+      </h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-mute">Four phases. Real dates. Honest expectations — including the parts other agencies won't say out loud.</p>
+
+      <div class="mt-14 grid gap-5 md:grid-cols-2">
+        {phases.map((p) => (
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-mist p-8">
+            <div class="flex items-center justify-between">
+              <span class="text-[40px] font-black leading-none" style={`color:${p.color}`}>{p.num}</span>
+              <span class="rounded-full border border-line bg-paper px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-mute">{p.when}</span>
             </div>
-          ))}
-        </div>
+            <h3 class="mt-4 text-[22px] font-black text-navy">{p.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-mute">{p.body}</p>
+            <p class="mt-4 border-t border-line pt-4 text-sm font-semibold text-navy">{p.payoff}</p>
+          </div>
+        ))}
       </div>
+
+      <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-mute">
+        Meaningful map-pack movement lands <span class="font-semibold text-navy">months 4–6</span> in most markets.
+        We'd rather tell you that now than send you a jargon report in month two.
+      </p>
     </div>
   </section>
 
-  <!-- ===== FOUNDER ===== -->
-  <section class="bg-paper px-5 py-24">
-    <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-      <div class="size-28 overflow-hidden rounded-full ring-4 ring-cyan/25">
-        <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" loading="lazy" />
+  <!-- ===== COMPARISON (them vs us) ===== -->
+  <section class="bg-mist px-5 py-24">
+    <div class="mx-auto max-w-[1100px]">
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ The comparison</p>
+      <h2 class="mx-auto mt-3 max-w-2xl text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">
+        Most agencies aren't in your corner. <span class="text-cyan">We are.</span>
+      </h2>
+
+      <div class="mt-14 grid gap-5 md:grid-cols-2">
+        <!-- THEM -->
+        <div class="rounded-[24px] border border-line bg-paper p-8">
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-mute">✕ Other agencies</p>
+          <p class="mt-1 text-sm text-mute">Any business with a credit card.</p>
+          <dl class="mt-6 space-y-4">
+            {compareRows.map(([label, them]) => (
+              <div class="border-b border-line pb-3">
+                <dt class="text-[10px] font-bold uppercase tracking-[0.16em] text-mute/70">{label}</dt>
+                <dd class="mt-1 text-sm text-mute">{them}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <!-- US -->
+        <div class="rounded-[24px] border-2 border-cyan bg-paper p-8 shadow-lg shadow-cyan/10">
+          <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-deep">✦ Goliath Solutions</p>
+          <p class="mt-1 text-sm font-medium text-navy">Blue collar service businesses. Zero dilution.</p>
+          <dl class="mt-6 space-y-4">
+            {compareRows.map(([label, , us]) => (
+              <div class="border-b border-line pb-3">
+                <dt class="text-[10px] font-bold uppercase tracking-[0.16em] text-mute/70">{label}</dt>
+                <dd class="mt-1 flex items-start gap-2 text-sm font-semibold text-navy">
+                  <span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-cyan text-white"><Icon name="check" size={9} /></span>
+                  {us}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
-      <blockquote class="max-w-2xl text-[22px] font-medium leading-relaxed text-navy">
-        "I've spent 14 years running real businesses — including a pool company we ranked to #1 in South Florida
-        ourselves. I know what it's like to lose a job because your site looked like 2009 and your phone rang while
-        you were on a roof. That's exactly what this fixes."
-      </blockquote>
-      <p class="text-sm text-mute">Joe Ford, founder — Goliath Solutions</p>
-      <a href="/about" class="inline-flex items-center gap-1.5 font-semibold text-cyan-deep">Read the story <Icon name="arrow" size={15} /></a>
     </div>
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="bg-mist px-5 py-24">
+  <section class="bg-paper px-5 py-24">
     <div class="mx-auto max-w-[1320px]">
-      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ Straight answers</p>
-      <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Questions answered.</h2>
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">★ The questions operators actually ask</p>
+      <h2 class="mt-3 text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(30px, 4.5vw, 44px)">Still skeptical? Good.</h2>
+      <p class="mx-auto mt-3 max-w-xl text-center text-mute">The best operators always are. If it's not answered here, ask on the call — you'll get a straight answer.</p>
       <div class="mt-12"><FAQ items={faqItems} /></div>
     </div>
   </section>
 
   <!-- ===== FINAL CTA (navy band) ===== -->
-  <section class="bg-navy px-5 py-24">
+  <section class="bg-mist px-5 py-24">
     <div class="relative mx-auto max-w-[1100px] overflow-hidden rounded-[32px] p-10 text-center md:p-16" style="background: linear-gradient(135deg, #002d5e 0%, #001a37 100%); box-shadow: 0 40px 80px rgba(0,0,0,0.3)">
       <div class="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full" style="background: rgba(17,150,204,0.18)"></div>
       <div class="pointer-events-none absolute -bottom-32 -left-20 size-80 rounded-full" style="background: rgba(246,187,6,0.1)"></div>
       <div class="relative text-white">
         <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-gold">★ We take a handful of new builds a month ★</p>
-        <h2 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.02em]" style="font-size: clamp(32px, 6vw, 60px)">Make your business the first call in town.</h2>
+        <h2 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.02em]" style="font-size: clamp(32px, 6vw, 60px)">Stop hoping.<br /><span class="text-cyan">Start booking.</span></h2>
         <p class="mx-auto mt-4 max-w-xl text-[17px] text-white/80">
-          Free game plan. No pressure. If we're not the right fit, we'll tell you who is. Backed by our 90-Day Ring Guarantee.
+          A free 30-minute game plan for your market — yours to keep even if we never work together.
+          If we're not the right fit, we'll tell you who is. Backed by the 90-Day Ring Guarantee.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-3">
           <a href={BOOKING_URL} class="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-[16px] font-bold text-navy transition hover:bg-white">Claim your free game plan <Icon name="arrow" size={17} /></a>
           <a href="/contact" class="inline-flex items-center rounded-full border border-white/40 px-7 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10">Get a quote</a>
         </div>
+        <p class="mt-5 text-xs text-white/50">Free game plan · Zero obligation · 30 minutes</p>
       </div>
     </div>
   </section>
