@@ -47,14 +47,13 @@ const faqItems = [
 >
   <!-- ===== HERO (founder banner background) ===== -->
   <section class="relative isolate overflow-hidden bg-navy">
-    <Image src={joeHero} alt="Joe Ford, founder of Goliath Solutions, outside a South Florida waterfront home" class="absolute inset-0 -z-10 h-full w-full object-cover object-[28%_16%] lg:object-[38%_20%]" loading="eager" />
-    <!-- mobile scrim: darken the photo so the text reads over it -->
-    <div class="absolute inset-0 -z-10 lg:hidden" style="background: linear-gradient(to bottom, rgba(0,16,31,0.66) 0%, rgba(0,16,31,0.84) 100%)"></div>
+    <!-- mobile: whole photo shown full-width (banner), text below. desktop: full-bleed cover background. -->
+    <Image src={joeHero} alt="Joe Ford, founder of Goliath Solutions, outside a South Florida waterfront home" class="relative h-auto w-full lg:absolute lg:inset-0 lg:-z-10 lg:h-full lg:w-full lg:object-cover lg:object-[38%_20%]" loading="eager" />
     <!-- desktop scrim: left-heavy for the text column -->
     <div class="absolute inset-0 -z-10 hidden lg:block" style="background: linear-gradient(100deg, rgba(0,26,55,0.88) 0%, rgba(0,26,55,0.62) 42%, rgba(0,45,94,0.28) 100%)"></div>
 
-    <div class="mx-auto grid max-w-[1320px] gap-10 px-5 py-16 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div class="rise text-white [text-shadow:0_2px_18px_rgba(0,16,31,0.55)]">
+    <div class="mx-auto grid max-w-[1320px] gap-10 px-5 py-12 sm:py-16 lg:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div class="rise text-white lg:[text-shadow:0_2px_18px_rgba(0,16,31,0.55)]">
         <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur [text-shadow:none]">
           <span class="text-gold"><Icon name="star" size={13} /></span> Operators who rank their own businesses
         </p>
