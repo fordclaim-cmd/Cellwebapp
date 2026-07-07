@@ -7,6 +7,7 @@ import Icon from '../components/Icon.astro';
 import { PRICING, BOOKING_URL } from '../config';
 
 import heroPool from '../assets/proof/hero-banner-pool.jpg';
+import fbpSite from '../assets/proof/fbp-site.jpeg';
 import joeFord from '../assets/proof/joe-ford.jpg';
 import cleanWater from '../assets/proof/clean-water.jpg';
 import techSkimming from '../assets/proof/tech-skimming-pool.jpg';
@@ -71,20 +72,34 @@ const faqItems = [
         <p class="mt-4 text-sm text-white/60">Free 30-min call. No pressure. No jargon. Backed by our 90-Day Ring Guarantee.</p>
       </div>
 
-      <!-- Floating proof card -->
-      <div class="rise rounded-[20px] bg-paper p-5 shadow-2xl shadow-navy-deep/40 [animation-delay:0.15s]">
-        <div class="flex items-center gap-2 border-b border-line pb-3 text-sm text-mute">
-          <Icon name="search" size={15} class="text-cyan" /> pool service boca raton
+      <!-- Right column: Google proof card + "what we can do for you" site preview -->
+      <div class="rise space-y-4 [animation-delay:0.15s]">
+        <div class="rounded-[20px] bg-paper p-5 shadow-2xl shadow-navy-deep/40">
+          <div class="flex items-center gap-2 border-b border-line pb-3 text-sm text-mute">
+            <Icon name="search" size={15} class="text-cyan" /> pool service boca raton
+          </div>
+          <div class="mt-3 rounded-xl border border-line bg-mist p-4">
+            <span class="rounded-full bg-cyan/15 px-2 py-0.5 text-xs font-bold text-cyan-deep">#1 · Map pack</span>
+            <p class="mt-2 font-bold text-navy">Florida's Best Pools</p>
+            <p class="text-sm text-gold-deep">★★★★★ <span class="text-mute">5.0 · 200 Google reviews</span></p>
+            <p class="mt-1 text-sm text-mute">Pool service · Boca Raton, FL · Open 24 hrs</p>
+          </div>
         </div>
-        <div class="mt-3 rounded-xl border border-line bg-mist p-4">
-          <span class="rounded-full bg-cyan/15 px-2 py-0.5 text-xs font-bold text-cyan-deep">#1 · Map pack</span>
-          <p class="mt-2 font-bold text-navy">Florida's Best Pools</p>
-          <p class="text-sm text-gold-deep">★★★★★ <span class="text-mute">5.0 · 197 Google reviews</span></p>
-          <p class="mt-1 text-sm text-mute">Pool service · Boca Raton, FL · Open 24 hrs</p>
-        </div>
-        <p class="mt-4 text-center text-xs font-medium text-mute">
-          A real business we built and rank — <span class="text-navy">our own</span>.
-        </p>
+
+        <!-- Real site we built — "what we can do for you" -->
+        <a href="https://floridasbestpools.com" target="_blank" rel="noopener" class="block overflow-hidden rounded-[20px] bg-paper shadow-2xl shadow-navy-deep/40">
+          <div class="flex items-center gap-1.5 border-b border-line bg-mist px-4 py-2.5">
+            <span class="size-2.5 rounded-full bg-red-400"></span>
+            <span class="size-2.5 rounded-full bg-yellow-400"></span>
+            <span class="size-2.5 rounded-full bg-green-400"></span>
+            <span class="ml-2 truncate text-xs text-mute">floridasbestpools.com</span>
+          </div>
+          <Image src={fbpSite} alt="A website Goliath built and ranks — Florida's Best Pools homepage" class="w-full" loading="lazy" />
+          <div class="flex items-center justify-between gap-2 px-4 py-3">
+            <p class="text-xs font-semibold text-navy">What we can do for you — a real site we built &amp; rank.</p>
+            <span class="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-cyan-deep">See it live <Icon name="arrow" size={13} /></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -93,7 +108,7 @@ const faqItems = [
   <section class="border-b border-line bg-paper">
     <div class="mx-auto max-w-[1320px] px-5 py-8">
       <div class="grid grid-cols-2 gap-6 text-center sm:grid-cols-4">
-        {[['197', '5-star reviews'], ['10,000+', 'pools serviced'], ['#1', 'on Google, local'], ['14 yrs', 'running businesses']].map(([n, l]) => (
+        {[['200', '5-star reviews'], ['10,000+', 'pools serviced'], ['#1', 'on Google, local'], ['14 yrs', 'running businesses']].map(([n, l]) => (
           <div>
             <div class="font-black tracking-[-0.02em] text-navy" style="font-size: clamp(26px, 4vw, 40px)">{n}</div>
             <div class="mx-auto mt-2 h-0.5 w-12 rounded bg-cyan"></div>
@@ -189,7 +204,7 @@ const faqItems = [
           {[['#1196cc', '#1', 'on Google for "best florida pools" — up from #7'],
             ['#1196cc', '#2', 'for "pool heater maintenance" — 1,600 searches/mo'],
             ['#1196cc', 'Top 3', 'across Boca Raton & Delray Beach pool searches'],
-            ['#a37c08', '★ 5.0', '197 Google reviews and climbing']].map(([color, n, l]) => (
+            ['#a37c08', '★ 5.0', '200 Google reviews and climbing']].map(([color, n, l]) => (
             <div class="rounded-2xl border border-line bg-paper p-5">
               <div class="text-[28px] font-black" style={`color:${color}`}>{n}</div>
               <div class="mt-1 text-sm text-mute">{l}</div>

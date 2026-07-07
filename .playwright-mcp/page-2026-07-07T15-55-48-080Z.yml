@@ -1,0 +1,676 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: ★★★★★
+      - generic [ref=e7]: 200+ Google Reviews
+    - generic [ref=e8]: •
+    - generic [ref=e9]: CPO & FPPS Licensed
+    - generic [ref=e10]: •
+    - generic [ref=e11]: "FSPA Member · #77999"
+    - generic [ref=e12]: •
+    - generic [ref=e13]: 40+ Years
+    - generic [ref=e14]: •
+    - generic [ref=e15]: 10,000+ Pools Serviced
+    - generic [ref=e16]: •
+    - generic [ref=e17]: Family-Owned & Operated
+  - banner [ref=e18]:
+    - generic [ref=e20]:
+      - link "Give us a call 954-347-1120" [ref=e21] [cursor=pointer]:
+        - /url: tel:+19543471120
+        - img [ref=e23]
+        - generic [ref=e25]:
+          - generic [ref=e26]: Give us a call
+          - generic [ref=e27]: 954-347-1120
+      - generic [ref=e28]:
+        - img [ref=e30]
+        - generic [ref=e32]:
+          - generic [ref=e33]: 24/7 Emergency Line
+          - generic [ref=e34]:
+            - text: Serving South Florida
+            - text: Communities
+    - generic [ref=e36]:
+      - link "Jump to instant quote form" [ref=e37] [cursor=pointer]:
+        - /url: "#quote"
+        - img "Florida's Best Pool Service" [ref=e38]
+      - navigation "Main" [ref=e39]:
+        - link "Home" [ref=e40] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e41] [cursor=pointer]:
+          - /url: /about
+        - link "Services" [ref=e42] [cursor=pointer]:
+          - /url: /services
+        - link "Service Areas" [ref=e43] [cursor=pointer]:
+          - /url: /service-areas
+        - link "Pool 101" [ref=e44] [cursor=pointer]:
+          - /url: /training/library
+        - link "Blog" [ref=e45] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e46]:
+        - button "Search the site" [ref=e47]:
+          - img [ref=e48]
+        - link "Pool service cost calculator" [ref=e51] [cursor=pointer]:
+          - /url: /pool-service-cost-calculator
+          - img [ref=e52]
+          - generic [ref=e54]:
+            - text: Cost
+            - text: Calculator
+  - main [ref=e55]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]: Boca Raton • Delray Beach • South Florida
+        - heading "Boca Raton's Top-Rated Pool Service, Cleaning & Maintenance" [level=1] [ref=e63]
+        - paragraph [ref=e64]: Headquartered in Boca Raton — serving Boca Raton, Delray Beach, Fort Lauderdale, and surrounding South Florida areas.
+        - paragraph [ref=e65]: Starting at $125/month — flat-rate pricing, free on-site quote, no contracts.
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - term [ref=e68]: Service area
+            - definition [ref=e69]: Boca Raton, Delray Beach, Highland Beach, Boynton Beach, Deerfield Beach, Fort Lauderdale, Pompano Beach, Coral Springs · Palm Beach & Broward County, FL
+          - generic [ref=e70]:
+            - term [ref=e71]: Starting price
+            - definition [ref=e72]: $125/month, flat-rate, no contracts
+          - generic [ref=e73]:
+            - term [ref=e74]: Rating
+            - definition [ref=e75]: 5.0 stars across 200+ Google reviews
+          - generic [ref=e76]:
+            - term [ref=e77]: Experience
+            - definition [ref=e78]: 40+ years combined founder experience · 10,000+ pools serviced
+          - generic [ref=e79]:
+            - term [ref=e80]: Licenses
+            - definition [ref=e81]: CPO C-105377 + FPPS 600551
+          - generic [ref=e82]:
+            - term [ref=e83]: Memberships
+            - definition [ref=e84]: "FSPA Member #77999 (Florida Swimming Pool Association)"
+          - generic [ref=e85]:
+            - term [ref=e86]: HQ address
+            - definition [ref=e87]: 333 NE Mizner Blvd Suite 7, Boca Raton, FL 33432
+          - generic [ref=e88]:
+            - term [ref=e89]: Phone
+            - definition [ref=e90]: 954-347-1120
+        - generic [ref=e91]:
+          - 'link "Call Now: 954-347-1120" [ref=e92] [cursor=pointer]':
+            - /url: tel:+19543471120
+            - img [ref=e93]
+            - generic [ref=e95]: "Call Now: 954-347-1120"
+          - link "PREFER TO TEXT INSTEAD" [ref=e96] [cursor=pointer]:
+            - /url: sms:+19543471120
+            - img [ref=e97]
+            - generic [ref=e99]: PREFER TO TEXT INSTEAD
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e103]: Google
+            - generic [ref=e104]:
+              - generic [ref=e105]: ★★★★★
+              - text: 200+ Google Reviews
+          - generic [ref=e106]:
+            - img [ref=e108]
+            - generic [ref=e110]: Headquartered in Boca Raton
+          - generic [ref=e111]:
+            - img [ref=e113]
+            - generic [ref=e115]: Licensed & Insured
+      - complementary [ref=e116]:
+        - heading "Get an Instant Quote" [level=2] [ref=e117]
+        - paragraph [ref=e118]: Free, no contracts. ~60 seconds.
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: Step 1 of 2
+              - generic [ref=e124]: 11% done
+            - progressbar "Quote form progress" [ref=e125]
+          - textbox [ref=e128]
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: Choose your service below (required)
+            - group "Type of service (required)" [ref=e131]:
+              - button "Weekly pool service" [ref=e132]:
+                - img [ref=e133]
+                - text: Weekly pool service
+              - button "Green pool cleanup" [ref=e136]:
+                - img [ref=e137]
+                - text: Green pool cleanup
+              - button "Equipment Diagnostics / Issues" [ref=e139]:
+                - img [ref=e140]
+                - text: Equipment Diagnostics / Issues
+              - button "Vacation rental / Airbnb" [ref=e142]:
+                - img [ref=e143]
+                - text: Vacation rental / Airbnb
+              - button "Commercial / HOA" [ref=e145]:
+                - img [ref=e146]
+                - text: Commercial / HOA
+              - button "Other" [ref=e149]:
+                - img [ref=e150]
+                - text: Other
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - heading "See Why South Florida Homeowners Trust Florida's Best Pools" [level=2] [ref=e154]:
+          - text: See Why South Florida Homeowners
+          - text: Trust Florida's Best Pools
+        - paragraph [ref=e155]: Weekly maintenance, equipment care, repairs — handled.
+        - generic [ref=e158]:
+          - 'link "Call Now: 954-347-1120" [ref=e159] [cursor=pointer]':
+            - /url: tel:+19543471120
+            - img [ref=e160]
+            - generic [ref=e162]: "Call Now: 954-347-1120"
+          - 'link "Text: 954-347-1120" [ref=e163] [cursor=pointer]':
+            - /url: sms:+19543471120
+            - img [ref=e164]
+            - generic [ref=e166]: "Text: 954-347-1120"
+      - img [ref=e167]
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - generic [ref=e173]: Trusted Pool Experts
+        - generic [ref=e174]:
+          - img "Florida's Best Pools team at the marina" [ref=e176]
+          - img "Technician inspecting pool equipment" [ref=e178]
+          - img "Clean, balanced pool water" [ref=e180]
+      - generic [ref=e181]:
+        - heading "Consistent Pool Care. Clear Results." [level=2] [ref=e182]:
+          - text: Consistent Pool Care.
+          - text: Clear Results.
+        - paragraph [ref=e183]: Certified techs handle cleaning, chemistry, and equipment — your pool stays swim-ready year-round.
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - img [ref=e187]
+            - generic [ref=e188]:
+              - heading "Safe & Balanced Water" [level=3] [ref=e189]
+              - paragraph [ref=e190]: Precise chemical balancing prevents algae, bacteria, and skin irritation.
+          - generic [ref=e191]:
+            - img [ref=e193]
+            - generic [ref=e194]:
+              - heading "Longer-Lasting Equipment" [level=3] [ref=e195]
+              - paragraph [ref=e196]: Regular maintenance helps extend the life of pumps and heaters while preventing costly repairs.
+          - generic [ref=e197]:
+            - img [ref=e199]
+            - generic [ref=e200]:
+              - heading "Reliable Professional Service" [level=3] [ref=e201]
+              - paragraph [ref=e202]: Consistent visits, trained technicians, and clear communication — no missed service or surprises.
+        - generic [ref=e203]:
+          - 'link "Call Now: 954-347-1120" [ref=e204] [cursor=pointer]':
+            - /url: tel:+19543471120
+            - img [ref=e205]
+            - generic [ref=e207]: "Call Now: 954-347-1120"
+          - 'link "Text: 954-347-1120" [ref=e208] [cursor=pointer]':
+            - /url: sms:+19543471120
+            - img [ref=e209]
+            - generic [ref=e211]: "Text: 954-347-1120"
+    - generic [ref=e213]:
+      - heading "40+ Years of Combined Pool Expertise for South Florida Homes" [level=2] [ref=e214]
+      - paragraph [ref=e215]: Four founders. 40+ years combined. 10,000+ South Florida pools serviced.
+      - generic [ref=e216]:
+        - figure "pools serviced across Palm Beach and Broward counties. — Florida's Best Pools route history, 2024–2026" [ref=e217]:
+          - generic [ref=e218]: 10,000+
+          - generic [ref=e219]:
+            - text: pools serviced across Palm Beach and Broward counties.
+            - generic [ref=e220]: — Florida's Best Pools route history, 2024–2026
+        - figure "years of combined founder experience between Matt Balog, Joe Ford, Ronald Liddell, and Doug Santiago. — Florida's Best Pools founder bios" [ref=e221]:
+          - generic [ref=e222]: 40+
+          - generic [ref=e223]:
+            - text: years of combined founder experience between Matt Balog, Joe Ford, Ronald Liddell, and Doug Santiago.
+            - generic [ref=e224]: — Florida's Best Pools founder bios
+        - figure "five-star Google reviews from South Florida homeowners. — Google Business Profile, Florida's Best Pools" [ref=e225]:
+          - generic [ref=e226]: 200+
+          - generic [ref=e227]:
+            - text: five-star Google reviews from South Florida homeowners.
+            - generic [ref=e228]: — Google Business Profile, Florida's Best Pools
+      - heading "Certified. Experienced. Trusted." [level=3] [ref=e229]
+      - generic [ref=e230]:
+        - img "CPO Certified" [ref=e232]
+        - img "FPPS Certified" [ref=e234]
+        - img "FSPA Member" [ref=e236]
+        - img "40+ Years Combined" [ref=e238]
+        - img "Family Owned" [ref=e240]
+        - img "Accredited" [ref=e242]
+      - link "Ask the Pros — Get a Free Quote" [ref=e244] [cursor=pointer]:
+        - /url: "#quote"
+    - generic [ref=e246]:
+      - heading "Trusted by Homeowners Across South Florida" [level=2] [ref=e247]:
+        - text: Trusted by Homeowners
+        - generic [ref=e248]: Across South Florida
+      - paragraph [ref=e249]: Real reviews from Boca Raton, Delray, and South Florida pool owners.
+      - link "200+ five-star Google reviews — read our verified reviews" [ref=e252] [cursor=pointer]:
+        - /url: https://floridasbestpoolsreviews.com
+        - generic [ref=e253]: ★★★★★
+        - generic [ref=e254]: 200+ five-star Google reviews
+        - generic [ref=e255]: Read our verified customer reviews →
+    - generic [ref=e257]:
+      - generic [ref=e258]:
+        - heading "New-Client Pool Service Offers" [level=2] [ref=e259]:
+          - text: New-Client
+          - text: Pool Service Offers
+        - paragraph [ref=e260]: Real promos. No bait, no contracts.
+      - generic [ref=e261]:
+        - generic [ref=e263]:
+          - img [ref=e265]
+          - heading "First 2 Weeks Free — Switch & Save" [level=3] [ref=e267]
+          - paragraph [ref=e268]: Switching pool companies? Your first 2 weeks of service are free — plus a complimentary pool evaluation and a 100% money-back guarantee on your first month. We even handle the handoff.
+          - paragraph [ref=e269]:
+            - strong [ref=e270]: "Perfect for:"
+            - text: homeowners switching pool companies.
+          - link "CLAIM THIS OFFER NOW!" [ref=e271] [cursor=pointer]:
+            - /url: /switch
+        - generic [ref=e273]:
+          - img [ref=e275]
+          - heading "First Service Chemical Check Included" [level=3] [ref=e277]
+          - paragraph [ref=e278]: We analyze and rebalance your water chemistry during your first visit at no additional cost.
+          - paragraph [ref=e279]:
+            - strong [ref=e280]: "Perfect for:"
+            - text: newly serviced or unbalanced pools.
+          - generic [ref=e281]: "CODE: CHEMCHECK"
+          - link "CLAIM THIS OFFER NOW!" [ref=e282] [cursor=pointer]:
+            - /url: /pool-service-cost-calculator?coupon=CHEMCHECK
+        - generic [ref=e284]:
+          - img [ref=e286]
+          - heading "Equipment Health Check" [level=3] [ref=e288]
+          - paragraph [ref=e289]: New clients receive a complimentary equipment inspection for optimal pool performance.
+          - paragraph [ref=e290]:
+            - strong [ref=e291]: "Perfect for:"
+            - text: maintaining optimal equipment performance.
+          - generic [ref=e292]: "CODE: EQUIPCHECK"
+          - link "CLAIM THIS OFFER NOW!" [ref=e293] [cursor=pointer]:
+            - /url: /pool-service-cost-calculator?coupon=EQUIPCHECK
+    - generic [ref=e295]:
+      - generic [ref=e296]:
+        - heading "Professional Pool Services in BOCA RATON & SOUTH FLORIDA" [level=2] [ref=e297]:
+          - generic [ref=e298]: Professional Pool Services in
+          - generic [ref=e299]: BOCA RATON & SOUTH FLORIDA
+        - paragraph [ref=e301]: Weekly service, equipment care, repairs — built for South Florida pools.
+      - generic [ref=e302]:
+        - link "Weekly Pool Cleaning & Maintenance" [ref=e303] [cursor=pointer]:
+          - /url: /services/weekly-pool-service
+          - img [ref=e304]
+          - heading "Weekly Pool Cleaning & Maintenance" [level=3] [ref=e307]
+        - link "Equipment Inspection & Preventive Care" [ref=e308] [cursor=pointer]:
+          - /url: /services/equipment-inspection
+          - img [ref=e309]
+          - heading "Equipment Inspection & Preventive Care" [level=3] [ref=e312]
+        - link "Water Chemistry Management" [ref=e313] [cursor=pointer]:
+          - /url: /services/water-chemistry
+          - img [ref=e314]
+          - heading "Water Chemistry Management" [level=3] [ref=e317]
+      - generic [ref=e318]:
+        - link "Pool Repairs & Troubleshooting" [ref=e319] [cursor=pointer]:
+          - /url: /services/pool-repairs
+          - img [ref=e320]
+          - heading "Pool Repairs & Troubleshooting" [level=3] [ref=e323]
+        - link "Equipment Replacement & Efficiency Upgrades" [ref=e324] [cursor=pointer]:
+          - /url: /services/equipment-upgrades
+          - img [ref=e325]
+          - heading "Equipment Replacement & Efficiency Upgrades" [level=3] [ref=e328]
+    - generic [ref=e329]:
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - heading "Built for Florida's Toughest Pool Conditions" [level=2] [ref=e332]
+          - paragraph [ref=e334]: Florida pools face unique challenges — extreme heat, heavy rain, humidity, and hard water all affect water chemistry daily.
+          - paragraph [ref=e336]:
+            - text: We protect your
+            - strong [ref=e337]: surfaces and chemistry
+            - text: through every season. Same tech, same route, no algae surprises.
+          - paragraph [ref=e338]:
+            - text: Stay ahead of it with
+            - link "weekly pool cleaning & maintenance in Boca Raton" [ref=e339] [cursor=pointer]:
+              - /url: /service-areas/boca-raton/weekly-pool-service
+            - text: — or if your water already turned, see our
+            - link "Boca Raton green pool cleanup" [ref=e340] [cursor=pointer]:
+              - /url: /service-areas/boca-raton/green-pool-cleanup
+            - text: .
+        - generic [ref=e341]:
+          - heading "When temperatures rise above 85°F, chemical balance shifts quickly, leading to:" [level=3] [ref=e342]
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - img [ref=e347]
+              - generic [ref=e348]: Algae Growth
+            - generic [ref=e349]:
+              - img [ref=e351]
+              - generic [ref=e352]: Calcium Scaling
+            - generic [ref=e353]:
+              - img [ref=e355]
+              - generic [ref=e356]: Cloudy Water
+            - generic [ref=e357]:
+              - img [ref=e359]
+              - generic [ref=e360]: Surface Discoloration
+      - link "Book Your Pool Inspection" [ref=e362] [cursor=pointer]:
+        - /url: "#quote"
+        - img [ref=e363]
+        - text: Book Your Pool Inspection
+    - generic [ref=e367]:
+      - generic [ref=e368]:
+        - heading "Pool Service FAQs" [level=2] [ref=e369]:
+          - text: Pool Service
+          - generic [ref=e370]: FAQs
+        - paragraph [ref=e371]: Pricing, chemistry, scheduling — answered for Boca Raton & South Florida pool owners.
+      - generic [ref=e373]:
+        - generic [ref=e374]:
+          - button "How much does pool service cost in Boca Raton, FL?" [expanded] [ref=e375]:
+            - img [ref=e377]
+            - generic [ref=e380]: How much does pool service cost in Boca Raton, FL?
+          - region "How much does pool service cost in Boca Raton, FL?" [ref=e381]:
+            - paragraph [ref=e382]: Weekly pool service in Boca Raton typically costs $125–$250 per month depending on pool size, whether it's saltwater or chlorine, and whether there's a spa. Flat-rate pricing means no add-on chemical fees — the monthly rate covers all standard chemicals. Florida's Best Pools offers a free on-site inspection and written quote within 24–48 hours. Call 954-347-1120.
+        - button "How often should you service a pool in South Florida?" [ref=e384]:
+          - img [ref=e386]
+          - generic [ref=e387]: How often should you service a pool in South Florida?
+        - button "What is a CPO license for pool service in Florida?" [ref=e389]:
+          - img [ref=e391]
+          - generic [ref=e392]: What is a CPO license for pool service in Florida?
+        - button "Why does my pool turn green so fast in Boca Raton?" [ref=e394]:
+          - img [ref=e396]
+          - generic [ref=e397]: Why does my pool turn green so fast in Boca Raton?
+        - button "Do I need to be home when the pool service technician comes?" [ref=e399]:
+          - img [ref=e401]
+          - generic [ref=e402]: Do I need to be home when the pool service technician comes?
+        - button "Where is Florida's Best Pools located?" [ref=e404]:
+          - img [ref=e406]
+          - generic [ref=e407]: Where is Florida's Best Pools located?
+        - button "What Boca Raton neighborhoods do you service?" [ref=e409]:
+          - img [ref=e411]
+          - generic [ref=e412]: What Boca Raton neighborhoods do you service?
+        - button "Is saltwater pool service more expensive than chlorine pool service?" [ref=e414]:
+          - img [ref=e416]
+          - generic [ref=e417]: Is saltwater pool service more expensive than chlorine pool service?
+        - button "What should I do with my pool before a hurricane in South Florida?" [ref=e419]:
+          - img [ref=e421]
+          - generic [ref=e422]: What should I do with my pool before a hurricane in South Florida?
+    - generic [ref=e424]:
+      - heading "Ready for reliable pool service in Boca Raton?" [level=2] [ref=e425]
+      - paragraph [ref=e427]:
+        - text: Boca Raton-headquartered. Free on-site evaluation. Flat-rate pricing. Same-tech, same-day weekly service. Pool emergency?
+        - link "Same-day emergency pool service" [ref=e428] [cursor=pointer]:
+          - /url: /service-areas/boca-raton/emergency-pool-service
+        - text: — within 24 hours as a rule.
+      - generic [ref=e429]:
+        - 'link "Call Now: 954-347-1120" [ref=e430] [cursor=pointer]':
+          - /url: tel:+19543471120
+          - img [ref=e431]
+          - generic [ref=e433]: "Call Now: 954-347-1120"
+        - 'link "Text: 954-347-1120" [ref=e434] [cursor=pointer]':
+          - /url: sms:+19543471120
+          - img [ref=e435]
+          - generic [ref=e437]: "Text: 954-347-1120"
+    - generic [ref=e438]:
+      - generic [ref=e439]:
+        - heading "Service Areas Across South Florida" [level=2] [ref=e440]
+        - paragraph [ref=e442]:
+          - text: "HQ:"
+          - generic [ref=e443]: 333 NE Mizner Blvd Suite 7, Boca Raton, FL 33432
+          - text: . Boca is our home market — these cities are weekly routes.
+      - generic [ref=e444]:
+        - link "Boca Raton HQ Palm Beach County" [ref=e445] [cursor=pointer]:
+          - /url: /service-areas/boca-raton
+          - generic [ref=e446]:
+            - text: Boca Raton
+            - generic [ref=e447]: HQ
+          - generic [ref=e448]: Palm Beach County
+        - link "Delray Beach Palm Beach County" [ref=e449] [cursor=pointer]:
+          - /url: /service-areas/delray-beach
+          - generic [ref=e450]: Delray Beach
+          - generic [ref=e451]: Palm Beach County
+        - link "Highland Beach Palm Beach County" [ref=e452] [cursor=pointer]:
+          - /url: /service-areas/highland-beach
+          - generic [ref=e453]: Highland Beach
+          - generic [ref=e454]: Palm Beach County
+        - link "Deerfield Beach Broward County" [ref=e455] [cursor=pointer]:
+          - /url: /service-areas/deerfield-beach
+          - generic [ref=e456]: Deerfield Beach
+          - generic [ref=e457]: Broward County
+        - link "Boynton Beach Palm Beach County" [ref=e458] [cursor=pointer]:
+          - /url: /service-areas/boynton-beach
+          - generic [ref=e459]: Boynton Beach
+          - generic [ref=e460]: Palm Beach County
+        - link "Lighthouse Point Broward County" [ref=e461] [cursor=pointer]:
+          - /url: /service-areas/lighthouse-point
+          - generic [ref=e462]: Lighthouse Point
+          - generic [ref=e463]: Broward County
+        - link "Pompano Beach Broward County" [ref=e464] [cursor=pointer]:
+          - /url: /service-areas/pompano-beach
+          - generic [ref=e465]: Pompano Beach
+          - generic [ref=e466]: Broward County
+        - link "Fort Lauderdale Broward County" [ref=e467] [cursor=pointer]:
+          - /url: /service-areas/fort-lauderdale
+          - generic [ref=e468]: Fort Lauderdale
+          - generic [ref=e469]: Broward County
+        - link "Wellington Palm Beach County" [ref=e470] [cursor=pointer]:
+          - /url: /service-areas/wellington
+          - generic [ref=e471]: Wellington
+          - generic [ref=e472]: Palm Beach County
+        - link "Manalapan Palm Beach County" [ref=e473] [cursor=pointer]:
+          - /url: /service-areas/manalapan
+          - generic [ref=e474]: Manalapan
+          - generic [ref=e475]: Palm Beach County
+        - link "Hypoluxo Palm Beach County" [ref=e476] [cursor=pointer]:
+          - /url: /service-areas/hypoluxo
+          - generic [ref=e477]: Hypoluxo
+          - generic [ref=e478]: Palm Beach County
+        - link "Lantana Palm Beach County" [ref=e479] [cursor=pointer]:
+          - /url: /service-areas/lantana
+          - generic [ref=e480]: Lantana
+          - generic [ref=e481]: Palm Beach County
+        - link "Coral Springs Broward County" [ref=e482] [cursor=pointer]:
+          - /url: /service-areas/coral-springs
+          - generic [ref=e483]: Coral Springs
+          - generic [ref=e484]: Broward County
+        - link "Coconut Creek Broward County" [ref=e485] [cursor=pointer]:
+          - /url: /service-areas/coconut-creek
+          - generic [ref=e486]: Coconut Creek
+          - generic [ref=e487]: Broward County
+        - link "Margate Broward County" [ref=e488] [cursor=pointer]:
+          - /url: /service-areas/margate
+          - generic [ref=e489]: Margate
+          - generic [ref=e490]: Broward County
+  - contentinfo [ref=e491]:
+    - generic [ref=e492]:
+      - generic [ref=e493]:
+        - generic [ref=e494]:
+          - generic [ref=e495]: Florida's Best Pool Service
+          - paragraph [ref=e496]: Family-owned pool cleaning, maintenance, and repair experts serving South Florida — built on 40+ years of combined founder experience. CPO-licensed. Fully insured.
+          - generic [ref=e497]:
+            - link "facebook" [ref=e498] [cursor=pointer]:
+              - /url: https://www.facebook.com/floridasbestpoolService
+              - img [ref=e499]
+            - link "instagram" [ref=e501] [cursor=pointer]:
+              - /url: https://www.instagram.com/floridasbestpools
+              - img [ref=e502]
+            - link "tiktok" [ref=e506] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@floridasbestpools
+              - img [ref=e507]
+            - link "youtube" [ref=e509] [cursor=pointer]:
+              - /url: https://www.youtube.com/@floridasbestpools
+              - img [ref=e510]
+            - link "linkedin" [ref=e513] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/floridasbestpools
+              - img [ref=e514]
+        - generic [ref=e516]:
+          - generic [ref=e517]: Services
+          - list [ref=e518]:
+            - listitem [ref=e519]:
+              - link "Weekly Pool Cleaning & Maintenance" [ref=e520] [cursor=pointer]:
+                - /url: /services/weekly-pool-service
+            - listitem [ref=e521]:
+              - link "Equipment Inspection & Preventive Care" [ref=e522] [cursor=pointer]:
+                - /url: /services/equipment-inspection
+            - listitem [ref=e523]:
+              - link "Water Chemistry Management" [ref=e524] [cursor=pointer]:
+                - /url: /services/water-chemistry
+            - listitem [ref=e525]:
+              - link "Pool Repairs & Troubleshooting" [ref=e526] [cursor=pointer]:
+                - /url: /services/pool-repairs
+            - listitem [ref=e527]:
+              - link "Equipment Replacement & Efficiency Upgrades" [ref=e528] [cursor=pointer]:
+                - /url: /services/equipment-upgrades
+            - listitem [ref=e529]:
+              - link "Pool Resurfacing & Renovation" [ref=e530] [cursor=pointer]:
+                - /url: /services/pool-renovation
+            - listitem [ref=e531]:
+              - link "Pool Heater Repair & Replacement" [ref=e532] [cursor=pointer]:
+                - /url: /services/pool-heater-repair
+            - listitem [ref=e533]:
+              - link "Commercial & HOA Pool Service" [ref=e534] [cursor=pointer]:
+                - /url: /services/commercial-pool-service
+        - generic [ref=e535]:
+          - generic [ref=e536]: Resources
+          - list [ref=e537]:
+            - listitem [ref=e538]:
+              - link "FAQs" [ref=e539] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e540]:
+              - link "Cost calculator" [ref=e541] [cursor=pointer]:
+                - /url: /pool-service-cost-calculator
+            - listitem [ref=e542]:
+              - link "Salt calculator" [ref=e543] [cursor=pointer]:
+                - /url: /blog/how-much-salt-to-add-to-pool
+            - listitem [ref=e544]:
+              - link "Chlorine calculator" [ref=e545] [cursor=pointer]:
+                - /url: /blog/how-much-chlorine-to-add-to-pool
+            - listitem [ref=e546]:
+              - link "CYA calculator" [ref=e547] [cursor=pointer]:
+                - /url: /blog/how-much-stabilizer-to-add-to-pool
+            - listitem [ref=e548]:
+              - link "Our team" [ref=e549] [cursor=pointer]:
+                - /url: /team
+            - listitem [ref=e550]:
+              - link "Licenses & credentials" [ref=e551] [cursor=pointer]:
+                - /url: /credentials
+            - listitem [ref=e552]:
+              - link "Training Academy" [ref=e553] [cursor=pointer]:
+                - /url: /training
+            - listitem [ref=e554]:
+              - link "Industry Reports Hub" [ref=e555] [cursor=pointer]:
+                - /url: /industry-reports
+            - listitem [ref=e556]:
+              - link "2026 Pool Industry Statistics" [ref=e557] [cursor=pointer]:
+                - /url: /pool-industry-statistics
+            - listitem [ref=e558]:
+              - link "Blog" [ref=e559] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e560]:
+              - link "Careers — we're hiring" [ref=e561] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=e562]:
+          - generic [ref=e563]: Service Areas
+          - list [ref=e564]:
+            - listitem [ref=e565]:
+              - link "Pool Service in Delray Beach" [ref=e566] [cursor=pointer]:
+                - /url: /service-areas/delray-beach
+            - listitem [ref=e567]:
+              - link "Pool Service in Boca Raton" [ref=e568] [cursor=pointer]:
+                - /url: /service-areas/boca-raton
+            - listitem [ref=e569]:
+              - link "Pool Service in Highland Beach" [ref=e570] [cursor=pointer]:
+                - /url: /service-areas/highland-beach
+            - listitem [ref=e571]:
+              - link "Pool Service in Deerfield Beach" [ref=e572] [cursor=pointer]:
+                - /url: /service-areas/deerfield-beach
+            - listitem [ref=e573]:
+              - link "Pool Service in Boynton Beach" [ref=e574] [cursor=pointer]:
+                - /url: /service-areas/boynton-beach
+            - listitem [ref=e575]:
+              - link "Pool Service in Lighthouse Point" [ref=e576] [cursor=pointer]:
+                - /url: /service-areas/lighthouse-point
+            - listitem [ref=e577]:
+              - link "Pool Service in Pompano Beach" [ref=e578] [cursor=pointer]:
+                - /url: /service-areas/pompano-beach
+            - listitem [ref=e579]:
+              - link "Pool Service in Fort Lauderdale" [ref=e580] [cursor=pointer]:
+                - /url: /service-areas/fort-lauderdale
+            - listitem [ref=e581]:
+              - link "Pool Service in Wellington" [ref=e582] [cursor=pointer]:
+                - /url: /service-areas/wellington
+            - listitem [ref=e583]:
+              - link "Pool Service in Manalapan" [ref=e584] [cursor=pointer]:
+                - /url: /service-areas/manalapan
+            - listitem [ref=e585]:
+              - link "Pool Service in Hypoluxo" [ref=e586] [cursor=pointer]:
+                - /url: /service-areas/hypoluxo
+            - listitem [ref=e587]:
+              - link "Pool Service in Lantana" [ref=e588] [cursor=pointer]:
+                - /url: /service-areas/lantana
+            - listitem [ref=e589]:
+              - link "Pool Service in Coral Springs" [ref=e590] [cursor=pointer]:
+                - /url: /service-areas/coral-springs
+            - listitem [ref=e591]:
+              - link "Pool Service in Coconut Creek" [ref=e592] [cursor=pointer]:
+                - /url: /service-areas/coconut-creek
+            - listitem [ref=e593]:
+              - link "Pool Service in Margate" [ref=e594] [cursor=pointer]:
+                - /url: /service-areas/margate
+        - generic [ref=e595]:
+          - link "Contact" [ref=e596] [cursor=pointer]:
+            - /url: /contact
+          - list [ref=e597]:
+            - listitem [ref=e598]:
+              - link "Request a free quote" [ref=e599] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e600]:
+              - link "Switching companies? First 2 weeks free" [ref=e601] [cursor=pointer]:
+                - /url: /switch
+            - listitem [ref=e602]:
+              - link "954-347-1120" [ref=e603] [cursor=pointer]:
+                - /url: tel:+19543471120
+            - listitem [ref=e604]:
+              - link "Text 954-347-1120" [ref=e605] [cursor=pointer]:
+                - /url: sms:+19543471120
+            - listitem [ref=e606]:
+              - link "info@floridasbestpools.com" [ref=e607] [cursor=pointer]:
+                - /url: mailto:info@floridasbestpools.com
+            - listitem [ref=e608]:
+              - generic [ref=e609]:
+                - text: 333 NE Mizner Blvd Suite 7
+                - text: Boca Raton, FL 33432
+            - listitem [ref=e610]:
+              - text: Mon–Fri 24 hrs · Sat–Sun 9am–5pm
+              - text: 24/7 emergency line
+            - listitem [ref=e611]:
+              - link "Read our verified customer reviews" [ref=e612] [cursor=pointer]:
+                - /url: https://floridasbestpoolsreviews.com
+      - generic [ref=e613]:
+        - generic [ref=e614]: "© 2026 Florida's Best Pools, d/b/a Florida's Best Pool Service. All rights reserved. CPO License C-105377 · FPPS #600551 · FSPA Member #77999."
+        - generic [ref=e615]:
+          - link "Credentials" [ref=e616] [cursor=pointer]:
+            - /url: /credentials
+          - link "Privacy" [ref=e617] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e618] [cursor=pointer]:
+            - /url: /terms
+          - link "SMS Terms" [ref=e619] [cursor=pointer]:
+            - /url: /sms-terms
+          - link "Accessibility" [ref=e620] [cursor=pointer]:
+            - /url: /accessibility
+  - alert [ref=e621]
+  - dialog "Chat with Poolie":
+    - generic:
+      - complementary:
+        - generic:
+          - heading "Hello!" [level=2]
+          - paragraph: We're online & here to chat! ☀️
+        - generic:
+          - img "Poolie"
+          - generic:
+            - generic: Poolie
+            - generic: Online Agent
+        - link "Call 954-347-1120":
+          - /url: tel:+19543471120
+          - generic: Call or text
+          - generic:
+            - img
+            - text: 954-347-1120
+      - generic:
+        - generic:
+          - generic: Chat with Poolie
+          - button "Close chat":
+            - img
+        - log "Chat messages":
+          - generic:
+            - generic:
+              - img "Poolie"
+              - generic: Hey, I'm Poolie!
+        - generic:
+          - generic:
+            - textbox "Chat message":
+              - /placeholder: Type your message…
+            - button "Send message" [disabled]:
+              - img
+          - paragraph:
+            - text: Powered by AI · For urgent issues call
+            - link "954-347-1120":
+              - /url: tel:+19543471120
+          - paragraph: By sharing your name and phone or email with Poolie, you agree to receive calls, texts, and emails from Florida's Best Pools at the info you provide. Reply STOP to opt out anytime. Msg & data rates may apply.
+  - button "Chat with Poolie" [ref=e623]:
+    - img [ref=e624]
