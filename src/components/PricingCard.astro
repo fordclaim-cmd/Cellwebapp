@@ -2,8 +2,6 @@
 import { PRICING, BOOKING_URL } from '../config';
 import Icon from './Icon.astro';
 
-// Hormozi value stack: anchor each deliverable's standalone value, sum it,
-// then reveal the real price. Numbers are honest local-market equivalents.
 const stack = [
   ['A website built to book jobs, not just sit there', '$4,500'],
   ['Local SEO + Google Business Profile, managed every month', '$1,200/mo'],
@@ -12,53 +10,53 @@ const stack = [
   ['Monthly marketing + a plain-English report', '$1,000/mo'],
 ];
 ---
-<div class="mx-auto max-w-xl overflow-hidden rounded-[24px] border border-flame/40 bg-surface" style="box-shadow: 0 0 0 1px rgba(17,150,204,0.33), 0 30px 70px rgba(17,150,204,0.13)">
-  <div class="h-1.5 w-full" style="background: linear-gradient(90deg, #1196cc 0%, #3cb5e3 100%)"></div>
+<div class="mx-auto max-w-xl overflow-hidden rounded-[24px] border border-line bg-paper shadow-xl shadow-navy/10">
+  <div class="h-1.5 w-full" style="background: linear-gradient(90deg, #1196cc 0%, #f6bb06 100%)"></div>
 
   <div class="px-8 py-6 text-center">
-    <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-gold">The Goliath Growth System</p>
-    <p class="mt-1 text-sm text-white/60">Everything below, run for you — one system, one price.</p>
+    <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-cyan">The Goliath Growth System</p>
+    <p class="mt-1 text-sm text-mute">Everything below, run for you — one system, one price.</p>
   </div>
 
   <div class="px-8">
     <ul class="space-y-3 text-sm">
       {stack.map(([item, value]) => (
         <li class="flex items-start justify-between gap-4 border-b border-line pb-3">
-          <span class="flex gap-2.5 text-white/90">
-            <span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-flame text-white"><Icon name="check" size={9} /></span>
+          <span class="flex gap-2.5 text-navy">
+            <span class="mt-0.5 inline-grid size-4 shrink-0 place-items-center rounded-full bg-cyan text-white"><Icon name="check" size={9} /></span>
             {item}
           </span>
-          <span class="shrink-0 text-white/35 line-through">{value}</span>
+          <span class="shrink-0 text-mute line-through">{value}</span>
         </li>
       ))}
     </ul>
 
     <div class="mt-6 flex items-baseline justify-between">
-      <span class="text-sm font-semibold text-white/50">Real-world value</span>
-      <span class="text-lg font-bold text-white/35 line-through">$6,100+ up front, $2,700/mo</span>
+      <span class="text-sm font-semibold text-mute">Real-world value</span>
+      <span class="text-lg font-bold text-mute line-through">$6,100+ up front, $2,700/mo</span>
     </div>
 
-    <div class="mt-6 rounded-2xl border border-line bg-panel p-6 text-center">
-      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-flame">You pay</p>
-      <div class="mt-2 flex items-end justify-center gap-2">
-        <span class="text-5xl font-black tracking-[-0.03em] text-white">${PRICING.setup.toLocaleString()}</span>
-        <span class="pb-1 text-sm text-white/50">to build</span>
-        <span class="px-1 pb-1 text-2xl text-white/25">+</span>
-        <span class="text-5xl font-black tracking-[-0.03em] text-white">${PRICING.monthly}</span>
-        <span class="pb-1 text-sm text-white/50">/mo</span>
+    <div class="mt-6 rounded-2xl border border-line bg-mist p-6 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan">You pay</p>
+      <div class="mt-2 flex items-end justify-center gap-2 text-navy">
+        <span class="text-5xl font-black tracking-[-0.03em]">${PRICING.setup.toLocaleString()}</span>
+        <span class="pb-1 text-sm text-mute">to build</span>
+        <span class="px-1 pb-1 text-2xl text-mute/60">+</span>
+        <span class="text-5xl font-black tracking-[-0.03em]">${PRICING.monthly}</span>
+        <span class="pb-1 text-sm text-mute">/mo</span>
       </div>
-      <p class="mt-2 text-sm text-white/50">Less than one lost job a month.</p>
+      <p class="mt-2 text-sm text-mute">Less than one lost job a month.</p>
     </div>
 
-    <a href={BOOKING_URL} class="mt-6 flex items-center justify-center gap-2 rounded-full bg-flame py-4 text-lg font-bold text-white transition hover:bg-flame-deep">
+    <a href={BOOKING_URL} class="mt-6 flex items-center justify-center gap-2 rounded-full bg-gold py-4 text-lg font-bold text-navy transition hover:bg-gold-deep hover:text-white">
       Claim your free game plan <Icon name="arrow" size={18} />
     </a>
   </div>
 
-  <div class="mt-6 flex items-center gap-3 border-t border-line bg-gold/10 px-8 py-4 text-sm text-white/85">
-    <Icon name="shield" size={26} class="shrink-0 text-gold" />
-    <p><span class="font-bold text-white">90-Day Ring Guarantee:</span> if your phone isn't ringing with new leads in 90 days, we work free until it does.</p>
+  <div class="mt-6 flex items-center gap-3 border-t border-line bg-gold/10 px-8 py-4 text-sm text-navy">
+    <Icon name="shield" size={26} class="shrink-0 text-gold-deep" />
+    <p><span class="font-bold">90-Day Ring Guarantee:</span> if your phone isn't ringing with new leads in 90 days, we work free until it does.</p>
   </div>
 
-  <p class="px-8 pb-8 pt-4 text-center text-xs text-white/40">Month to month. No long contracts. You own everything. Cancel anytime.</p>
+  <p class="px-8 pb-8 pt-4 text-center text-xs text-mute">Month to month. No long contracts. You own everything. Cancel anytime.</p>
 </div>

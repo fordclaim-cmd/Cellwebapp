@@ -9,19 +9,18 @@ import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from
   description="Book a free 30-minute game plan or request a quote for the Goliath Growth System. Website, local SEO, and marketing for the trades — done for you, backed by a 90-Day Ring Guarantee."
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-ground px-5 py-20 text-center sm:py-24">
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-[360px]" style="background: radial-gradient(ellipse at top, rgba(17,150,204,0.2) 0%, rgba(0,0,0,0) 60%)"></div>
-    <div class="relative mx-auto max-w-[1320px]">
+  <section class="bg-navy px-5 py-20 text-center text-white sm:py-24">
+    <div class="mx-auto max-w-[1320px]">
       <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold">★ Free 30-minute game plan</p>
-      <h1 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.02em] text-white" style="font-size: clamp(36px, 6vw, 60px)">Let's make your <span class="text-flame">phone ring.</span></h1>
-      <p class="mx-auto mt-4 max-w-xl text-white/65">
+      <h1 class="mx-auto mt-3 max-w-2xl font-black tracking-[-0.02em]" style="font-size: clamp(36px, 6vw, 60px)">Let's make your <span class="text-cyan">phone ring.</span></h1>
+      <p class="mx-auto mt-4 max-w-xl text-white/75">
         Tell us where it hurts. We'll map your fastest wins on a free call — no pitch theater, no jargon, no obligation.
         If we're not the right fit, we'll point you to who is.
       </p>
-      <a href={BOOKING_URL} class="mt-7 inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-[16px] font-bold text-white transition hover:bg-flame-deep">
+      <a href={BOOKING_URL} class="mt-7 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-[16px] font-bold text-navy transition hover:bg-white">
         Book my free game plan <Icon name="arrow" size={17} />
       </a>
-      <div class="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/55">
+      <div class="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/70">
         <span class="text-gold">★ 5.0 · 197 reviews</span>
         <span>#1 on Google, local</span>
         <span>You reply with the operator, not a chatbot</span>
@@ -30,19 +29,19 @@ import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from
   </section>
 
   <!-- WHAT HAPPENS NEXT -->
-  <section class="bg-panel px-5 py-16">
+  <section class="bg-paper px-5 py-16">
     <div class="mx-auto max-w-5xl">
-      <h2 class="text-center font-black tracking-[-0.01em] text-white" style="font-size: clamp(24px, 4vw, 34px)">What happens after you reach out</h2>
+      <h2 class="text-center font-black tracking-[-0.01em] text-navy" style="font-size: clamp(24px, 4vw, 34px)">What happens after you reach out</h2>
       <div class="mt-12 grid gap-5 sm:grid-cols-3">
         {[
           ['1', 'We call you back', 'Within one business day. A real conversation about your market and your bottlenecks — not a sales script.'],
           ['2', 'You get a game plan', 'A clear, honest read on your fastest path to more booked jobs. Yours to keep, even if you never hire us.'],
           ['3', 'We build — if it fits', 'Like the plan? We start. Live in about two weeks, backed by the 90-Day Ring Guarantee. Month to month, always.'],
         ].map(([n, title, body]) => (
-          <div class="rounded-[20px] border border-line bg-surface p-6">
-            <div class="grid size-9 place-items-center rounded-full bg-flame text-sm font-black text-white">{n}</div>
-            <h3 class="mt-4 text-[18px] font-black text-white">{title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-white/60">{body}</p>
+          <div class="rounded-[20px] border border-line bg-mist p-6">
+            <div class="grid size-9 place-items-center rounded-full bg-cyan text-sm font-black text-white">{n}</div>
+            <h3 class="mt-4 text-[18px] font-black text-navy">{title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-mute">{body}</p>
           </div>
         ))}
       </div>
@@ -50,24 +49,24 @@ import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from
   </section>
 
   <!-- FORM -->
-  <section class="bg-ground px-5 py-16">
+  <section class="bg-mist px-5 py-16">
     <div class="mx-auto max-w-2xl">
-      <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(24px, 4vw, 34px)">Start here — pick what you need.</h2>
-      <p class="mt-2 text-white/65">Tell us what's hurting and we'll call you back within one business day. No spam, no wall of follow-up emails.</p>
+      <h2 class="font-black tracking-[-0.01em] text-navy" style="font-size: clamp(24px, 4vw, 34px)">Start here — pick what you need.</h2>
+      <p class="mt-2 text-mute">Tell us what's hurting and we'll call you back within one business day. No spam, no wall of follow-up emails.</p>
       <div class="mt-8"><QuoteForm /></div>
-      <p class="mt-10 text-sm text-white/55">
-        Rather go direct? <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-flame">{CONTACT_EMAIL}</a>
-        · <a href={`tel:${CONTACT_PHONE}`} class="font-semibold text-flame">{CONTACT_PHONE_DISPLAY}</a>
+      <p class="mt-10 text-sm text-mute">
+        Rather go direct? <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-cyan-deep">{CONTACT_EMAIL}</a>
+        · <a href={`tel:${CONTACT_PHONE}`} class="font-semibold text-cyan-deep">{CONTACT_PHONE_DISPLAY}</a>
       </p>
     </div>
   </section>
 
   <!-- GUARANTEE FOOTER -->
-  <section class="border-t border-line bg-panel px-5 py-14">
+  <section class="bg-navy px-5 py-14 text-white">
     <div class="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center">
-      <span class="grid size-14 place-items-center rounded-2xl text-gold" style="background: rgba(246,187,6,0.12); border: 1.5px solid rgba(246,187,6,0.4)"><Icon name="shield" size={28} /></span>
-      <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(24px, 4vw, 34px)">The 90-Day Ring Guarantee</h2>
-      <p class="max-w-xl text-white/70">If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does. That's how sure we are.</p>
+      <span class="grid size-14 place-items-center rounded-2xl bg-gold/15 text-gold" style="border: 1.5px solid rgba(246,187,6,0.4)"><Icon name="shield" size={28} /></span>
+      <h2 class="font-black tracking-[-0.01em]" style="font-size: clamp(24px, 4vw, 34px)">The 90-Day Ring Guarantee</h2>
+      <p class="max-w-xl text-white/80">If your phone isn't ringing with new leads within 90 days of launch, we keep working for free until it does. That's how sure we are.</p>
     </div>
   </section>
 </Layout>

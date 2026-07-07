@@ -2,17 +2,17 @@
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '../config';
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-line bg-ground text-white/60">
+<footer class="bg-navy text-white/70">
   <div class="mx-auto grid max-w-[1320px] gap-8 px-5 py-16 sm:grid-cols-3">
     <div>
       <div class="mb-3 flex items-center gap-2.5">
-        <span class="inline-grid size-9 place-items-center rounded-full bg-flame text-sm font-black text-white">G</span>
-        <span class="text-[14px] font-bold uppercase tracking-[0.16em] text-white">Goliath Solutions</span>
+        <span class="inline-grid size-9 place-items-center rounded-full bg-white text-sm font-black text-navy">G</span>
+        <span class="text-[14px] font-bold uppercase tracking-[0.14em] text-white">Goliath Solutions</span>
       </div>
       <p class="text-sm leading-relaxed">The Goliath Growth System — website, local SEO, and marketing, done for you. Based in Florida. Working everywhere.</p>
     </div>
     <div class="text-sm">
-      <h5 class="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white">Site</h5>
+      <h5 class="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan">Site</h5>
       <ul class="space-y-2">
         <li><a href="/#included" class="transition hover:text-white">The System</a></li>
         <li><a href="/#pricing" class="transition hover:text-white">Pricing</a></li>
@@ -22,14 +22,14 @@ const year = new Date().getFullYear();
       </ul>
     </div>
     <div class="text-sm">
-      <h5 class="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white">Get in touch</h5>
+      <h5 class="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan">Get in touch</h5>
       <ul class="space-y-2">
         <li><a href={`mailto:${CONTACT_EMAIL}`} class="transition hover:text-white">{CONTACT_EMAIL}</a></li>
         <li><a href={`tel:${CONTACT_PHONE}`} class="transition hover:text-white">{CONTACT_PHONE_DISPLAY}</a></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-line py-6 text-center text-xs">
+  <div class="border-t border-white/10 py-6 text-center text-xs text-white/50">
     © {year} Goliath Solutions. Made for builders, doers, and operators.
   </div>
 </footer>

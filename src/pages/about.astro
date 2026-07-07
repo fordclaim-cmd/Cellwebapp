@@ -9,27 +9,24 @@ import joeFord from '../assets/proof/joe-ford.jpg';
   title="About — Goliath Solutions"
   description="Joe Ford spent 14 years running real businesses before building Goliath Solutions — websites, SEO, and marketing systems for the trades."
 >
-  <section class="relative overflow-hidden bg-ground px-5 py-20 text-center sm:py-24">
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-[360px]" style="background: radial-gradient(ellipse at top, rgba(17,150,204,0.2) 0%, rgba(0,0,0,0) 60%)"></div>
-    <div class="relative">
-      <div class="mx-auto size-28 overflow-hidden rounded-full ring-4 ring-flame/30">
-        <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" />
-      </div>
-      <h1 class="mt-6 font-black tracking-[-0.02em] text-white" style="font-size: clamp(36px, 6vw, 60px)">Built by an operator,<br /><span class="text-flame">not an agency.</span></h1>
+  <section class="bg-navy px-5 py-20 text-center text-white sm:py-24">
+    <div class="mx-auto size-28 overflow-hidden rounded-full ring-4 ring-cyan/40">
+      <Image src={joeFord} alt="Joe Ford, founder of Goliath Solutions" class="h-full w-full object-cover" />
     </div>
+    <h1 class="mt-6 font-black tracking-[-0.02em]" style="font-size: clamp(36px, 6vw, 60px)">Built by an operator,<br /><span class="text-cyan">not an agency.</span></h1>
   </section>
 
-  <section class="mx-auto max-w-2xl space-y-5 px-5 py-16 text-[18px] leading-relaxed text-white/75">
+  <section class="mx-auto max-w-2xl space-y-5 px-5 py-16 text-[18px] leading-relaxed text-ink">
     <p>I'm Joe Ford. I've spent the last 14 years running real businesses — hiring crews, chasing invoices, answering phones at dinner, and learning the hard way what actually brings work in the door.</p>
     <p>Along the way I got deep into the other side: building websites, ranking on Google, wiring up automations, and putting AI to work. I built these systems for my own companies first — including Florida's Best Pools, a South Florida pool company I'm a partner in, now ranked #1 on Google with 197 five-star reviews. Then friends in the trades started asking for the same thing.</p>
     <p>That became Goliath Solutions. One package that handles the whole online side of a service business — website, local SEO, Google Business, reviews, marketing — for a price a working company can actually justify.</p>
     <p>No account managers. No jargon reports. No $2,000/month retainers for two blog posts. You deal with me, you see the numbers, and if we're not earning our keep, you leave — month to month.</p>
-    <p class="font-bold text-white">Great work deserves to be found. Let's make sure yours is.</p>
+    <p class="font-bold text-navy">Great work deserves to be found. Let's make sure yours is.</p>
   </section>
 
-  <section class="border-t border-line bg-panel px-5 py-16 text-center">
-    <h2 class="font-black tracking-[-0.01em] text-white" style="font-size: clamp(28px, 4.5vw, 40px)">Tell me where it hurts.</h2>
-    <p class="mt-2 text-white/65">The first call is free and useful — even if you never hire us.</p>
-    <a href={BOOKING_URL} class="mt-6 inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 font-bold text-white transition hover:bg-flame-deep">Book a free call <Icon name="arrow" size={16} /></a>
+  <section class="border-t border-line bg-mist px-5 py-16 text-center">
+    <h2 class="font-black tracking-[-0.01em] text-navy" style="font-size: clamp(28px, 4.5vw, 40px)">Tell me where it hurts.</h2>
+    <p class="mt-2 text-mute">The first call is free and useful — even if you never hire us.</p>
+    <a href={BOOKING_URL} class="mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 font-bold text-navy transition hover:bg-gold-deep hover:text-white">Book a free call <Icon name="arrow" size={16} /></a>
   </section>
 </Layout>

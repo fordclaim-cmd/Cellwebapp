@@ -9,39 +9,38 @@
 }
 
 @theme {
-  /* Florida's Best Pools palette — navy ground + cyan accent + bright gold.
-     Token names kept (flame/grape) so existing classes remap without churn:
-     flame = signature cyan CTA, grape = bright cyan, gold = FBP bright gold. */
+  /* Light, photo-forward — Florida's Best Pools brand.
+     Navy headings, cyan accent, gold CTA, white/mist surfaces. */
+  --color-navy: #002d5e;
+  --color-navy-deep: #001a37;
+  --color-cyan: #1196cc;
+  --color-cyan-deep: #0d7aa8;
+  --color-gold: #f6bb06;
+  --color-gold-deep: #a37c08;
+  --color-ink: #14202b;
+  --color-mute: #5b6b7a;
+  --color-mist: #f2f8fc;
+  --color-line: #dbe6ef;
+  --color-paper: #ffffff;
+
+  /* legacy aliases so any stray class still resolves */
   --color-flame: #1196cc;
   --color-flame-deep: #0d7aa8;
-  --color-grape: #3cb5e3;
-  --color-grape-deep: #005099;
-  --color-gold: #f6bb06;
-  --color-gold-deep: #c99405;
-  --color-ground: #00101f;
-  --color-panel: #001c38;
-  --color-surface: #002d5e;
-  --color-line: #0e3a63;
-  --color-hair: #14456e;
-  --color-ash: #b9cbdd;
-
-  /* legacy accent kept so any un-migrated class still resolves */
   --color-accent: #1196cc;
-  --color-accent-soft: #3cb5e3;
-  --color-ink: #002d5e;
-  --color-paper: #001c38;
+  --color-surface: #ffffff;
+  --color-panel: #f2f8fc;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  background: #00101f;
+  background: #ffffff;
 }
 
 body {
-  background: #00101f;
-  color: #fff;
+  background: #ffffff;
+  color: #14202b;
 }
 
 /* Page-load reveal, CSS-only. Respects reduced-motion. */
