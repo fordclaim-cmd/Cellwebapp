@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('home renders offer and pricing', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('h1')).toContainText('Be the first call');
+  await expect(page.locator('h1:visible')).toContainText('Be the first call');
   await expect(page.locator('#pricing')).toContainText('$1,500');
   await expect(page.locator('#pricing')).toContainText('$397');
 });
