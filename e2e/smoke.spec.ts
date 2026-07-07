@@ -26,27 +26,34 @@ test('bookkeeper pages still served', async ({ page }) => {
   expect(resp!.status()).toBe(200);
 });
 
-test('quote form submits to /api/lead and shows success', async ({ page }) => {
+test('quote form: pick service, submit, show success', async ({ page }) => {
   // astro preview has no /api — stub the endpoint at the network layer
   await page.route('**/api/lead', (route) =>
     route.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' }),
   );
   await page.goto('/contact');
+  await page.locator('[data-service]').first().click(); // step 1 → step 2
   await page.fill('input[name="name"]', 'Mike Rowe');
-  await page.fill('input[name="trade"]', 'Plumbing');
   await page.fill('input[name="phone"]', '(561) 555-0100');
-  await page.fill('input[name="city"]', 'West Palm Beach');
   await page.click('button[type="submit"]');
-  await expect(page.locator('[data-status]')).toContainText("we'll call you");
+  await expect(page.locator('[data-success]')).toContainText("we'll call you");
 });
 
 test('quote form shows failure message on API error', async ({ page }) => {
   await page.route('**/api/lead', (route) => route.fulfill({ status: 500, body: '{}' }));
   await page.goto('/contact');
+  await page.locator('[data-service]').first().click();
   await page.fill('input[name="name"]', 'Mike Rowe');
-  await page.fill('input[name="trade"]', 'Plumbing');
   await page.fill('input[name="phone"]', '(561) 555-0100');
-  await page.fill('input[name="city"]', 'West Palm Beach');
   await page.click('button[type="submit"]');
   await expect(page.locator('[data-status]')).toContainText('Something went wrong');
+});
+
+test('quote form blocks an invalid phone client-side', async ({ page }) => {
+  await page.goto('/contact');
+  await page.locator('[data-service]').first().click();
+  await page.fill('input[name="name"]', 'Mike Rowe');
+  await page.fill('input[name="phone"]', 'call me');
+  await page.click('button[type="submit"]');
+  await expect(page.locator('[data-status]')).toContainText('valid US phone');
 });

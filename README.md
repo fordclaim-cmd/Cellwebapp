@@ -21,9 +21,8 @@ All pricing, booking, and contact values live in `src/config.ts`. Edit there; ev
    sending domain, then `vercel env add RESEND_API_KEY`. Optionally `vercel env add LEAD_TO_EMAIL`
    (defaults to fordclaim@gmail.com). Until the key is set, leads are logged in Vercel function
    logs, not emailed.
-3. **Booking link:** Replace `BOOKING_URL` in `src/config.ts` with your Cal.com/Calendly URL.
+3. **Booking:** All "Book a free call" CTAs route to the on-site quote form (`BOOKING_URL = '/contact#quote'`). To use a calendar instead, set `BOOKING_URL` in `src/config.ts` to a Cal.com/Calendly URL.
 4. **Phone:** Replace `CONTACT_PHONE` / `CONTACT_PHONE_DISPLAY` in `src/config.ts`.
-5. **Founder photo:** Replace the "JF" badge in `src/pages/about.astro` and the home founder section.
 
 ## Do not touch
 

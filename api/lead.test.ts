@@ -11,12 +11,13 @@ function mockRes() {
 }
 
 const valid = {
+  service: 'Local SEO',
   name: 'Mike Rowe',
-  trade: 'Plumbing',
   phone: '(561) 555-0100',
+  trade: 'Plumbing',
   city: 'West Palm Beach',
   message: '',
-  website: '',
+  _hp: '',
 };
 
 describe('POST /api/lead', () => {
@@ -40,7 +41,7 @@ describe('POST /api/lead', () => {
   it('returns 200 ok for spam without sending email', async () => {
     const fetchSpy = vi.spyOn(globalThis, 'fetch');
     const res = mockRes();
-    await handler({ method: 'POST', body: { ...valid, website: 'spam' } } as any, res);
+    await handler({ method: 'POST', body: { ...valid, _hp: 'spam' } } as any, res);
     expect(res.statusCode).toBe(200);
     expect(fetchSpy).not.toHaveBeenCalled();
   });
